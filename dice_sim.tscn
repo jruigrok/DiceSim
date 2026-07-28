@@ -1,18 +1,23 @@
 [gd_scene format=3 uid="uid://c0kkvfs6t36hg"]
 
+[ext_resource type="Script" uid="uid://c2bsgkoa6ru07" path="res://dice_sets/BuildDiceSet.gd" id="1_8m4iu"]
 [ext_resource type="PackedScene" uid="uid://b5v7otljbbpee" path="res://dice.tscn" id="2_a7a1p"]
+[ext_resource type="Material" uid="uid://da2wub2as7uhr" path="res://dice_materials/Material.001.tres" id="2_h8nld"]
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://arena.tscn" id="2_htkni"]
 [ext_resource type="Script" uid="uid://ctp58ltk6axvm" path="res://dice.gd" id="3_a7a1p"]
-[ext_resource type="PackedScene" uid="uid://bygvuu8asc183" path="res://dice_mesh/d_10.tscn" id="4_6l7yi"]
-[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://final_dice_res/D10.tres" id="5_8m4iu"]
+[ext_resource type="PackedScene" uid="uid://b4gcoq51mnmne" path="res://dice_mesh/d_4.tscn" id="4_6l7yi"]
+[ext_resource type="Resource" uid="uid://dvdgk5pv74bq2" path="res://dice_data/d_4.tres" id="5_8m4iu"]
 
 [sub_resource type="Environment" id="Environment_ss5pj"]
 sdfgi_enabled = true
 
 [node name="Node3D" type="Node3D" unique_id=725421418]
+script = ExtResource("1_8m4iu")
+set_name = "BlueDiceSet"
+material = ExtResource("2_h8nld")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=321865442]
-transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 0, 5, 0)
+transform = Transform3D(-1, 8.74228e-08, -3.8133444e-15, 4.4698993e-08, 0.5112968, 0.8594042, 7.5131524e-08, 0.85940415, -0.5112968, 0, 9, -9)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]

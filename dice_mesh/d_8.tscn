@@ -52,4 +52,4 @@ shadow_mesh = SubResource("ArrayMesh_m4tbs")
 [node name="LP_024_Material_001_0" type="MeshInstance3D" unique_id=741219394]
 mesh = SubResource("ArrayMesh_kj0el")
 script = ExtResource("4_ds85a")
-dice_data_path = "res://dice_res/D8.tres"
+dice_data_path = "res://dice_data/D8.tres"

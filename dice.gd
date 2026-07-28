@@ -66,16 +66,3 @@ func calculate_roll() -> int:
 func _input(event):
 	if event is InputEventMouseButton:
 		roll()
-	if event.is_action_pressed("ui_left"):
-		angular_velocity.z = -1.0
-	elif event.is_action_pressed("ui_right"):
-		angular_velocity.z = 1.0
-	else:
-		angular_velocity.z = 0.0
-	
-	if event.is_action_pressed("ui_up"):
-		angular_velocity.x = 1.0
-	elif event.is_action_pressed("ui_down"):
-		angular_velocity.x = -1.0
-	else:
-		angular_velocity.x = 0.0

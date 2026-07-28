@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://4uic5wked64k"]
 
-[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_tmw41"]
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_n0wko"]
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://dice_data/FaceData.gd" id="1_tmw41"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="2_n0wko"]
 
 [sub_resource type="Resource" id="Resource_fb3wy"]
 script = ExtResource("1_tmw41")

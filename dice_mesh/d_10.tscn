@@ -52,4 +52,4 @@ shadow_mesh = SubResource("ArrayMesh_nclva")
 [node name="LP_017_Material_001_0" type="MeshInstance3D" unique_id=391799223]
 mesh = SubResource("ArrayMesh_ongp6")
 script = ExtResource("4_skfab")
-dice_data_path = "res://dice_res/D10.tres"
+dice_data_path = "res://dice_data/D10.tres"

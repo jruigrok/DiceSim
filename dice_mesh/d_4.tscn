@@ -52,7 +52,7 @@ shadow_mesh = SubResource("ArrayMesh_ybihb")
 [node name="LP_020_Material_001_0" type="MeshInstance3D" unique_id=1234545227]
 mesh = SubResource("ArrayMesh_tr8jx")
 script = ExtResource("4_6vbci")
-dice_data_path = "res://dice_res/D4.tres"
+dice_data_path = "res://dice_data/D4.tres"
 
 [node name="2_Marker" type="Marker3D" parent="." unique_id=1835378790]
 transform = Transform3D(0.6549961, 0.57999206, -0.48434466, -0.15382576, 0.7299024, 0.6660184, 0.7398096, -0.36173463, 0.56730086, 0, 0, 0)
