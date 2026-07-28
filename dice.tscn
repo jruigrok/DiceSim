@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b5v7otljbbpee"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_psaxu"]
+bounce = 0.5
+
+[node name="Dice" type="RigidBody3D" unique_id=1974526011]
+physics_material_override = SubResource("PhysicsMaterial_psaxu")
+gravity_scale = 8.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1339893365]

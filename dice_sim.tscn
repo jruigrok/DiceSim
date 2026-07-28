@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c0kkvfs6t36hg"]
+
+[ext_resource type="PackedScene" uid="uid://b5v7otljbbpee" path="res://dice.tscn" id="2_a7a1p"]
+[ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://arena.tscn" id="2_htkni"]
+[ext_resource type="Script" uid="uid://ctp58ltk6axvm" path="res://dice.gd" id="3_a7a1p"]
+[ext_resource type="PackedScene" uid="uid://bygvuu8asc183" path="res://dice_mesh/d_10.tscn" id="4_6l7yi"]
+[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://final_dice_res/D10.tres" id="5_8m4iu"]
+
+[sub_resource type="Environment" id="Environment_ss5pj"]
+sdfgi_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=725421418]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=321865442]
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 0, 5, 0)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]
+transform = Transform3D(0.9971197, -0.027287815, 0.07076488, -0.07559387, -0.28187436, 0.9564688, -0.0061531435, -0.9590634, -0.28312528, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" parent="." unique_id=1252425372 instance=ExtResource("2_htkni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=945677622]
+environment = SubResource("Environment_ss5pj")
+
+[node name="Dice" parent="." unique_id=1974526011 instance=ExtResource("2_a7a1p")]
+script = ExtResource("3_a7a1p")
+dice_mesh = ExtResource("4_6l7yi")
+dice_data = ExtResource("5_8m4iu")

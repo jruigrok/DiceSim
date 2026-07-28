@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://bxr7wtem3qov1"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_r2dss"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_iqtqq"]
+
+[sub_resource type="Resource" id="Resource_2l0td"]
+script = ExtResource("1_r2dss")
+value = 5
+normal = Vector3(-0.8154647, 0.26126325, -0.51648706)
+
+[sub_resource type="Resource" id="Resource_whe2g"]
+script = ExtResource("1_r2dss")
+value = 11
+normal = Vector3(-0.6458589, 0.6081596, 0.46152815)
+
+[sub_resource type="Resource" id="Resource_ya62d"]
+script = ExtResource("1_r2dss")
+value = 6
+normal = Vector3(-0.038184594, 0.94386154, -0.32812694)
+
+[sub_resource type="Resource" id="Resource_eab7g"]
+script = ExtResource("1_r2dss")
+value = 9
+normal = Vector3(-0.86497754, -0.4065198, 0.2942033)
+
+[sub_resource type="Resource" id="Resource_fg2ws"]
+script = ExtResource("1_r2dss")
+value = 3
+normal = Vector3(0.39271072, 0.6979015, 0.5989255)
+
+[sub_resource type="Resource" id="Resource_diblg"]
+script = ExtResource("1_r2dss")
+value = 1
+normal = Vector3(0.11828784, 0.13664798, -0.983532)
+
+[sub_resource type="Resource" id="Resource_b71ai"]
+script = ExtResource("1_r2dss")
+value = 10
+normal = Vector3(-0.392707, -0.69792295, -0.59890306)
+
+[sub_resource type="Resource" id="Resource_ifrc4"]
+script = ExtResource("1_r2dss")
+value = 4
+normal = Vector3(0.8649633, 0.40656665, -0.29418042)
+
+[sub_resource type="Resource" id="Resource_iyyqq"]
+script = ExtResource("1_r2dss")
+value = 12
+normal = Vector3(-0.11823471, -0.13663392, 0.9835404)
+
+[sub_resource type="Resource" id="Resource_0xvru"]
+script = ExtResource("1_r2dss")
+value = 7
+normal = Vector3(0.038199056, -0.9438461, 0.3281696)
+
+[sub_resource type="Resource" id="Resource_xpbo2"]
+script = ExtResource("1_r2dss")
+value = 2
+normal = Vector3(0.6458729, -0.6081427, -0.46153075)
+
+[sub_resource type="Resource" id="Resource_wagob"]
+script = ExtResource("1_r2dss")
+value = 8
+normal = Vector3(0.8154637, -0.26129746, 0.5164713)
+
+[resource]
+script = ExtResource("2_iqtqq")
+faces = Array[ExtResource("1_r2dss")]([SubResource("Resource_2l0td"), SubResource("Resource_whe2g"), SubResource("Resource_ya62d"), SubResource("Resource_eab7g"), SubResource("Resource_fg2ws"), SubResource("Resource_diblg"), SubResource("Resource_b71ai"), SubResource("Resource_ifrc4"), SubResource("Resource_iyyqq"), SubResource("Resource_0xvru"), SubResource("Resource_xpbo2"), SubResource("Resource_wagob")])

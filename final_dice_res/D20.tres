@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://cw2dsbhvho3ng"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_arjnr"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_t0e68"]
+
+[sub_resource type="Resource" id="Resource_mqar5"]
+script = ExtResource("1_arjnr")
+value = 7
+normal = Vector3(-0.5819282, 0.39193836, -0.7125615)
+
+[sub_resource type="Resource" id="Resource_qtsnd"]
+script = ExtResource("1_arjnr")
+value = 10
+normal = Vector3(-0.1082989, -0.660741, -0.7427602)
+
+[sub_resource type="Resource" id="Resource_g7k1e"]
+script = ExtResource("1_arjnr")
+value = 5
+normal = Vector3(-0.8966657, 0.21883933, 0.38483754)
+
+[sub_resource type="Resource" id="Resource_mf3nu"]
+script = ExtResource("1_arjnr")
+value = 2
+normal = Vector3(-0.4230434, -0.83382523, 0.35464045)
+
+[sub_resource type="Resource" id="Resource_qn0s3"]
+script = ExtResource("1_arjnr")
+value = 19
+normal = Vector3(0.42302337, 0.83383036, -0.35465214)
+
+[sub_resource type="Resource" id="Resource_nmuot"]
+script = ExtResource("1_arjnr")
+value = 16
+normal = Vector3(0.89667785, -0.21881098, -0.38482553)
+
+[sub_resource type="Resource" id="Resource_r7wol"]
+script = ExtResource("1_arjnr")
+value = 11
+normal = Vector3(0.10828175, 0.6607513, 0.74275357)
+
+[sub_resource type="Resource" id="Resource_r71j0"]
+script = ExtResource("1_arjnr")
+value = 14
+normal = Vector3(0.58192474, -0.39194056, 0.71256316)
+
+[sub_resource type="Resource" id="Resource_t0syg"]
+script = ExtResource("1_arjnr")
+value = 17
+normal = Vector3(-0.055914637, 0.003485165, -0.9984295)
+
+[sub_resource type="Resource" id="Resource_tqv3k"]
+script = ExtResource("1_arjnr")
+value = 3
+normal = Vector3(0.56518203, 0.27660936, -0.7772108)
+
+[sub_resource type="Resource" id="Resource_2ax4j"]
+script = ExtResource("1_arjnr")
+value = 18
+normal = Vector3(-0.5651883, -0.27656776, 0.77722096)
+
+[sub_resource type="Resource" id="Resource_up0ob"]
+script = ExtResource("1_arjnr")
+value = 4
+normal = Vector3(0.0558922, -0.003470727, 0.9984307)
+
+[sub_resource type="Resource" id="Resource_2ostt"]
+script = ExtResource("1_arjnr")
+value = 15
+normal = Vector3(-0.9593904, -0.03220157, -0.28023738)
+
+[sub_resource type="Resource" id="Resource_2jba1"]
+script = ExtResource("1_arjnr")
+value = 12
+normal = Vector3(-0.66666144, -0.6828046, -0.29889837)
+
+[sub_resource type="Resource" id="Resource_hfrbf"]
+script = ExtResource("1_arjnr")
+value = 9
+normal = Vector3(0.6666575, 0.6828162, 0.29888108)
+
+[sub_resource type="Resource" id="Resource_a8m2k"]
+script = ExtResource("1_arjnr")
+value = 6
+normal = Vector3(0.9593961, 0.032219287, 0.28021592)
+
+[sub_resource type="Resource" id="Resource_lg0xo"]
+script = ExtResource("1_arjnr")
+value = 1
+normal = Vector3(-0.2859125, 0.90510744, -0.31469753)
+
+[sub_resource type="Resource" id="Resource_wnev1"]
+script = ExtResource("1_arjnr")
+value = 13
+normal = Vector3(-0.48043215, 0.7981402, 0.36353412)
+
+[sub_resource type="Resource" id="Resource_8upp0"]
+script = ExtResource("1_arjnr")
+value = 8
+normal = Vector3(0.48045224, -0.79813015, -0.36352983)
+
+[sub_resource type="Resource" id="Resource_ukg0c"]
+script = ExtResource("1_arjnr")
+value = 20
+normal = Vector3(0.28593746, -0.90509874, 0.31469977)
+
+[resource]
+script = ExtResource("2_t0e68")
+faces = Array[ExtResource("1_arjnr")]([SubResource("Resource_mqar5"), SubResource("Resource_qtsnd"), SubResource("Resource_g7k1e"), SubResource("Resource_mf3nu"), SubResource("Resource_qn0s3"), SubResource("Resource_nmuot"), SubResource("Resource_r7wol"), SubResource("Resource_r71j0"), SubResource("Resource_t0syg"), SubResource("Resource_tqv3k"), SubResource("Resource_2ax4j"), SubResource("Resource_up0ob"), SubResource("Resource_2ostt"), SubResource("Resource_2jba1"), SubResource("Resource_hfrbf"), SubResource("Resource_a8m2k"), SubResource("Resource_lg0xo"), SubResource("Resource_wnev1"), SubResource("Resource_8upp0"), SubResource("Resource_ukg0c")])

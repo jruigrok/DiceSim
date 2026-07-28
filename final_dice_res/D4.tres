@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://dvdgk5pv74bq2"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_bjoh1"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_53kvv"]
+
+[sub_resource type="Resource" id="Resource_bjoh1"]
+script = ExtResource("1_bjoh1")
+value = 2
+normal = Vector3(0.57999206, 0.7299024, -0.36173463)
+
+[sub_resource type="Resource" id="Resource_53kvv"]
+script = ExtResource("1_bjoh1")
+value = 3
+normal = Vector3(0.09371541, -0.050000466, 0.9943426)
+
+[sub_resource type="Resource" id="Resource_d4da2"]
+script = ExtResource("1_bjoh1")
+value = 4
+normal = Vector3(0.25235572, -0.87166387, -0.42014146)
+
+[sub_resource type="Resource" id="Resource_g3837"]
+script = ExtResource("1_bjoh1")
+value = 1
+normal = Vector3(-0.95396125, 0.20810266, -0.2159892)
+
+[resource]
+script = ExtResource("2_53kvv")
+faces = Array[ExtResource("1_bjoh1")]([SubResource("Resource_bjoh1"), SubResource("Resource_53kvv"), SubResource("Resource_d4da2"), SubResource("Resource_g3837")])

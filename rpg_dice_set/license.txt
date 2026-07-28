@@ -1,0 +1,11 @@
+Model Information:
+* title:	RPG Dice Set
+* source:	https://sketchfab.com/3d-models/rpg-dice-set-2498c370c56842f89fa3d7096c72ed56
+* author:	ghosted (https://sketchfab.com/dianaavlis2002)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RPG Dice Set" (https://sketchfab.com/3d-models/rpg-dice-set-2498c370c56842f89fa3d7096c72ed56) by ghosted (https://sketchfab.com/dianaavlis2002) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

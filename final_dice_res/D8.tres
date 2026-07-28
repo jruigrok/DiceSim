@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://dvca5ylbmeogp"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_c0b1x"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_21xv7"]
+
+[sub_resource type="Resource" id="Resource_r1esx"]
+script = ExtResource("1_c0b1x")
+value = 2
+normal = Vector3(-0.81649625, -0.5773487, 0.0015353072)
+
+[sub_resource type="Resource" id="Resource_58res"]
+script = ExtResource("1_c0b1x")
+value = 8
+normal = Vector3(-0.0015352833, -0.57734853, -0.8164963)
+
+[sub_resource type="Resource" id="Resource_rqyba"]
+script = ExtResource("1_c0b1x")
+value = 5
+normal = Vector3(-0.0015352678, 0.57736033, -0.8164881)
+
+[sub_resource type="Resource" id="Resource_aqbu6"]
+script = ExtResource("1_c0b1x")
+value = 3
+normal = Vector3(-0.81648797, 0.5773604, 0.0015352916)
+
+[sub_resource type="Resource" id="Resource_1oqlp"]
+script = ExtResource("1_c0b1x")
+value = 4
+normal = Vector3(0.0015228518, -0.5773427, 0.81650054)
+
+[sub_resource type="Resource" id="Resource_ejuqd"]
+script = ExtResource("1_c0b1x")
+value = 6
+normal = Vector3(0.8165004, -0.57734287, -0.0015228288)
+
+[sub_resource type="Resource" id="Resource_nxbnd"]
+script = ExtResource("1_c0b1x")
+value = 7
+normal = Vector3(0.8164922, 0.57735455, -0.0015228135)
+
+[sub_resource type="Resource" id="Resource_gtce3"]
+script = ExtResource("1_c0b1x")
+value = 1
+normal = Vector3(0.0015228364, 0.57735443, 0.8164922)
+
+[resource]
+script = ExtResource("2_21xv7")
+faces = Array[ExtResource("1_c0b1x")]([SubResource("Resource_r1esx"), SubResource("Resource_58res"), SubResource("Resource_rqyba"), SubResource("Resource_aqbu6"), SubResource("Resource_1oqlp"), SubResource("Resource_ejuqd"), SubResource("Resource_nxbnd"), SubResource("Resource_gtce3")])

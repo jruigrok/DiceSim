@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://btcfum7vepv1i"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_3hu21"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_eeb0q"]
+
+[sub_resource type="Resource" id="Resource_184dv"]
+script = ExtResource("1_3hu21")
+value = 10
+normal = Vector3(0.5608598, -0.6754419, 0.47876367)
+
+[sub_resource type="Resource" id="Resource_7250l"]
+script = ExtResource("1_3hu21")
+value = 4
+normal = Vector3(0.9128144, -0.30036598, -0.27667722)
+
+[sub_resource type="Resource" id="Resource_c4clu"]
+script = ExtResource("1_3hu21")
+value = 6
+normal = Vector3(0.76245046, 0.6004287, -0.24115251)
+
+[sub_resource type="Resource" id="Resource_r723x"]
+script = ExtResource("1_3hu21")
+value = 2
+normal = Vector3(0.31759107, 0.7820469, 0.5362262)
+
+[sub_resource type="Resource" id="Resource_ffobu"]
+script = ExtResource("1_3hu21")
+value = 8
+normal = Vector3(0.19298299, -0.006499643, 0.9811806)
+
+[sub_resource type="Resource" id="Resource_iqg65"]
+script = ExtResource("1_3hu21")
+value = 1
+normal = Vector3(-0.19298644, 0.006470655, -0.98118013)
+
+[sub_resource type="Resource" id="Resource_dp01g"]
+script = ExtResource("1_3hu21")
+value = 7
+normal = Vector3(-0.31758502, -0.78203773, -0.53624314)
+
+[sub_resource type="Resource" id="Resource_sykwe"]
+script = ExtResource("1_3hu21")
+value = 3
+normal = Vector3(-0.7624555, -0.60040647, 0.24119182)
+
+[sub_resource type="Resource" id="Resource_axa65"]
+script = ExtResource("1_3hu21")
+value = 5
+normal = Vector3(-0.912805, 0.30035487, 0.27671993)
+
+[sub_resource type="Resource" id="Resource_g58s6"]
+script = ExtResource("1_3hu21")
+value = 9
+normal = Vector3(-0.560851, 0.6754511, -0.47876087)
+
+[resource]
+script = ExtResource("2_eeb0q")
+faces = Array[ExtResource("1_3hu21")]([SubResource("Resource_184dv"), SubResource("Resource_7250l"), SubResource("Resource_c4clu"), SubResource("Resource_r723x"), SubResource("Resource_ffobu"), SubResource("Resource_iqg65"), SubResource("Resource_dp01g"), SubResource("Resource_sykwe"), SubResource("Resource_axa65"), SubResource("Resource_g58s6")])

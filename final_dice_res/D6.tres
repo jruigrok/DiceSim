@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://4uic5wked64k"]
+
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://final_dice_res/FaceData.gd" id="1_tmw41"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://final_dice_res/DiceData.gd" id="2_n0wko"]
+
+[sub_resource type="Resource" id="Resource_fb3wy"]
+script = ExtResource("1_tmw41")
+value = 3
+normal = Vector3(1, 0, 0)
+
+[sub_resource type="Resource" id="Resource_u7wno"]
+script = ExtResource("1_tmw41")
+value = 6
+normal = Vector3(0, -1, 0)
+
+[sub_resource type="Resource" id="Resource_3ty1j"]
+script = ExtResource("1_tmw41")
+value = 4
+normal = Vector3(-1, 0, 0)
+
+[sub_resource type="Resource" id="Resource_bu2lc"]
+script = ExtResource("1_tmw41")
+value = 1
+normal = Vector3(0, 1, 0)
+
+[sub_resource type="Resource" id="Resource_824vn"]
+script = ExtResource("1_tmw41")
+value = 2
+normal = Vector3(0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_w4c6y"]
+script = ExtResource("1_tmw41")
+value = 5
+normal = Vector3(0, 0, -1)
+
+[resource]
+script = ExtResource("2_n0wko")
+faces = Array[ExtResource("1_tmw41")]([SubResource("Resource_fb3wy"), SubResource("Resource_u7wno"), SubResource("Resource_3ty1j"), SubResource("Resource_bu2lc"), SubResource("Resource_824vn"), SubResource("Resource_w4c6y")])
