@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://ctp58ltk6axvm" path="res://dice.gd" id="3_a7a1p"]
 [ext_resource type="PackedScene" uid="uid://b4gcoq51mnmne" path="res://dice_mesh/d_4.tscn" id="4_6l7yi"]
 [ext_resource type="Resource" uid="uid://dvdgk5pv74bq2" path="res://dice_data/d_4.tres" id="5_8m4iu"]
+[ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://dice_selector.tscn" id="8_4acyc"]
+[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="9_byatm"]
 
 [sub_resource type="Environment" id="Environment_ss5pj"]
 sdfgi_enabled = true
@@ -34,3 +36,6 @@ environment = SubResource("Environment_ss5pj")
 script = ExtResource("3_a7a1p")
 dice_mesh = ExtResource("4_6l7yi")
 dice_data = ExtResource("5_8m4iu")
+
+[node name="CanvasLayer" parent="." unique_id=1160484203 instance=ExtResource("8_4acyc")]
+dice_set = ExtResource("9_byatm")
