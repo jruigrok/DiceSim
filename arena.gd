@@ -37,4 +37,5 @@ func build_walls(width: float, depth: float, wall_height: float):
 		var box_mesh = BoxMesh.new()
 		box_mesh.size = cfg["size"]
 		mesh_instance.mesh = box_mesh
+		box_mesh.material = preload("res://materials/floor_mat.tres")
 		body.add_child(mesh_instance)

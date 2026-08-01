@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://dice_data/FaceData.gd" id="1_3hu21"]
 [ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="2_eeb0q"]
+[ext_resource type="ArrayMesh" uid="uid://caimgo6kg2rc" path="res://dice_mesh/d_10.tres" id="2_yavft"]
 
 [sub_resource type="Resource" id="Resource_184dv"]
 script = ExtResource("1_3hu21")
@@ -55,4 +56,6 @@ normal = Vector3(-0.560851, 0.6754511, -0.47876087)
 
 [resource]
 script = ExtResource("2_eeb0q")
+name = "d_10"
 faces = Array[ExtResource("1_3hu21")]([SubResource("Resource_184dv"), SubResource("Resource_7250l"), SubResource("Resource_c4clu"), SubResource("Resource_r723x"), SubResource("Resource_ffobu"), SubResource("Resource_iqg65"), SubResource("Resource_dp01g"), SubResource("Resource_sykwe"), SubResource("Resource_axa65"), SubResource("Resource_g58s6")])
+mesh = ExtResource("2_yavft")

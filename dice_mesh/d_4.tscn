@@ -1,61 +1,16 @@
-[gd_scene format=4 uid="uid://b4gcoq51mnmne"]
+[gd_scene format=3 uid="uid://dp4ifwnckipn2"]
 
-[ext_resource type="Texture2D" uid="uid://b70j1xyytosdc" path="res://rpg_dice_set/textures/Material.001_baseColor.png" id="1_t152j"]
-[ext_resource type="Texture2D" uid="uid://bbto5hks7yhp2" path="res://rpg_dice_set/textures/Material.001_metallicRoughness.png" id="2_34kl6"]
-[ext_resource type="Texture2D" uid="uid://wqusyr5n8lod" path="res://rpg_dice_set/textures/Material.001_normal.png" id="3_4qpdj"]
+[ext_resource type="ArrayMesh" uid="uid://cex1xgq4pjg53" path="res://dice_mesh/d_4.tres" id="1_hebg5"]
 [ext_resource type="Script" uid="uid://cpat773f3lhwr" path="res://dice_mesh/NormFromMarker.gd" id="4_6vbci"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s580t"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_texture = ExtResource("1_t152j")
-metallic_texture = ExtResource("2_34kl6")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("2_34kl6")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("3_4qpdj")
-metadata/_gltf_primary_texture_coord = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ybihb"]
-_surfaces = [{
-"aabb": AABB(-0.95527506, -0.8716023, -0.41476417, 1.5385923, 1.5999739, 1.4070125),
-"format": 34896670721,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAgABAAMAAAADAAEAAAACAAMA"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("AABsq8sjAABasWiC//8AAGvKAAAAAAAA/////w8KAAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_tr8jx"]
-resource_name = "Sketchfab_Scene_LP_020_Material_001_0"
-_surfaces = [{
-"aabb": AABB(-0.95527506, -0.8716023, -0.41476417, 1.5385923, 1.5999739, 1.4070125),
-"attribute_data": PackedByteArray("LQCtHy0ArR9rjzQ6Bm39PWuPNDoGbf09iymQN4spkDeDMCY+W0FePoMwJj5bQV4+iynKB4spygeEMCY+ZF35PIQwJj5kXfk8RVMtAEVTLQDMiqY+MpA0OsyKpj4ykDQ65ikPGOYpDxiimSc+zH7APaKZJz7MfsA9RVPyL0VT8i/MiqY+P8o/PsyKpj4/yj8+LQDfVS0A31VjkDQ61L6rPmOQNDrUvqs+iynBbYspwW2FMCY+P4TbPoUwJj4/hNs+iyn8PYsp/D2EMCY+0PJ3PoQwJj7Q8nc+RVMRYEVTEWDLiqY+hSTAPsuKpj6FJMA+RVNMMEVTTDDLiqY+XDNBPsuKpj5cM0E+5ikvSOYpL0ijmSc+Gl+QPqOZJz4aX5A+"),
-"format": 34896670839,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsA"),
-"material": SubResource("StandardMaterial3D_s580t"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("AABsq8sjLLJasWiC//8ssmvKAAAAACyyAABsq8sjI+H/////Dwoj4VqxaIL//yPhAABsq8sjJP5rygAAAAAk/v////8PCiT+a8oAAAAAg+RasWiC//+D5P////8PCoPkCDpvqQg6b6kIOm+pMoiYsTKImLEyiJixFvWibhb1om4W9aJucqigYXKooGFyqKBh")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ybihb")
-
 [node name="LP_020_Material_001_0" type="MeshInstance3D" unique_id=1234545227]
-mesh = SubResource("ArrayMesh_tr8jx")
+mesh = ExtResource("1_hebg5")
 script = ExtResource("4_6vbci")
 dice_data_path = "res://dice_data/D4.tres"
 
 [node name="2_Marker" type="Marker3D" parent="." unique_id=1835378790]
 transform = Transform3D(0.6549961, 0.57999206, -0.48434466, -0.15382576, 0.7299024, 0.6660184, 0.7398096, -0.36173463, 0.56730086, 0, 0, 0)
+visible = false
 gizmo_extents = 1.34
 metadata/value = 2
 

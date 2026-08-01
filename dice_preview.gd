@@ -13,5 +13,4 @@ func _ready() -> void:
 	viewport.world_3d = World3D.new()
 
 func _process(delta: float) -> void:
-	mesh_instance.rotate_x(delta / 4)
-	mesh_instance.rotate_y(delta / 2)
+	mesh_instance.rotate_z(delta / 2)
