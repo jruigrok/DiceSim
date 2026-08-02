@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://43wh6uliyq0k"]
+
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="1_4m2oy"]
+[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://dice_behaviours/SpawnParticlesBh.gd" id="1_hj067"]
+[ext_resource type="Material" uid="uid://be2tbb4jbi5x8" path="res://materials/Material.011.tres" id="2_jr3dd"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://dice_sets/DiceSet.gd" id="2_kv7s4"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://dice_sets/DiceSetData.gd" id="2_tbu3x"]
+[ext_resource type="Resource" uid="uid://dvdgk5pv74bq2" path="res://dice_data/d_4.tres" id="4_jr3dd"]
+[ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="5_6bvi1"]
+[ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="6_jcm7g"]
+[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="7_efe50"]
+[ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="8_josvx"]
+[ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="9_5blk3"]
+
+[sub_resource type="Resource" id="Resource_btrgm"]
+script = ExtResource("1_hj067")
+metadata/_custom_type_script = "uid://gmu7hvu617rd"
+
+[sub_resource type="Resource" id="Resource_g3y8y"]
+script = ExtResource("2_tbu3x")
+behaviour = SubResource("Resource_btrgm")
+material = ExtResource("2_jr3dd")
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
+
+[resource]
+script = ExtResource("2_kv7s4")
+dice = Array[ExtResource("1_4m2oy")]([ExtResource("4_jr3dd"), ExtResource("5_6bvi1"), ExtResource("6_jcm7g"), ExtResource("7_efe50"), ExtResource("8_josvx"), ExtResource("9_5blk3")])
+data = SubResource("Resource_g3y8y")
+metadata/_custom_type_script = "uid://die8svrhe3dvd"

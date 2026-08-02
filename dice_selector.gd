@@ -12,13 +12,14 @@ func _ready() -> void:
 	if dice_set == null:
 		push_error("No dice set assigned")
 		return
-	margin_container.add_theme_constant_override("margin_bottom", 50)
+	margin_container.add_theme_constant_override("margin_bottom", 10)
 	
 	for i in range(dice_set.dice.size()):
 		var button = Button.new()
-		button.custom_minimum_size = Vector2i(100,100)
+		button.custom_minimum_size = Vector2i(80,80)
 		var preview = preview_scene.instantiate()
 		preview.dice_mesh = dice_set.dice[i].mesh
+		preview.dice_material = dice_set.data.material
 		var viewport = preview.get_node("SubViewport")
 		viewport.size = button.custom_minimum_size
 		var dice_roller = get_parent().get_node("DiceRoller")

@@ -6,13 +6,14 @@ var cur_set_data: DiceSetData
 
 var dice_scene = preload("res://dice.tscn")
 const MIN_ROLL_VEL = 5
-const MAX_ROLL_VEL = 30
+const MAX_ROLL_VEL = 10
 
 func _update_dice(new_dice_data: DiceData, new_set_data: DiceSetData) -> void:
 	cur_dice_data = new_dice_data
 	cur_set_data = new_set_data
 	mesh = cur_dice_data.mesh
-	
+	material_override = cur_set_data.material
+
 func roll() -> void:
 	if (cur_dice_data == null || cur_set_data == null):
 		return
@@ -29,7 +30,9 @@ func roll() -> void:
 	var dice = dice_scene.instantiate()
 	dice.dice_data = cur_dice_data
 	dice.set_data = cur_set_data
-	dice.get_node("MeshInstance3D").mesh = cur_dice_data.mesh
+	var mesh_instance = dice.get_node("MeshInstance3D")
+	mesh_instance.mesh = cur_dice_data.mesh
+	mesh_instance.material_override = cur_set_data.material
 	dice.linear_velocity = init_vel
 	dice.angular_velocity = init_avel
 	add_child(dice)

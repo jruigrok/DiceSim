@@ -7,6 +7,7 @@ class_name Dice
 
 @onready var collision_shape = $CollisionShape3D
 @onready var mesh_instance = $MeshInstance3D
+@onready var label = $Label3D
 
 const VEL_THRESHOLD: float = 0.05
 const RESTING_TIMEOUT: float = 0.5
@@ -56,9 +57,19 @@ func calculate_roll() -> int:
 			best_face = face.value
 	
 	set_data.behaviour.on_roll(self)
+	label.text = str(best_face)
+	label.visible = true
+	label.position = global_position + Vector3.UP * 0.5
+	var tween = create_tween()
+	tween.tween_property(
+		label,
+		"position:y",
+		label.position.y + 2,
+		1.0
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	return best_face
 
-func spawn_dice(sub_dice_data: DiceData, set_data: DiceSetData) -> void:
+func spawn_dice(sub_dice_data: DiceData, sub_set_data: DiceSetData) -> void:
 	pass
 
 func spawn_particles(particles: GPUParticles3D) -> void:

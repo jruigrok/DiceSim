@@ -11,11 +11,11 @@ background_mode = 1
 [node name="Node3D" type="Node3D" unique_id=725421418]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=321865442]
-transform = Transform3D(-1, 8.74228e-08, -3.8133444e-15, 4.4698993e-08, 0.5112968, 0.8594042, 7.5131524e-08, 0.85940415, -0.5112968, 0, 9, -9)
+transform = Transform3D(1, 0, 0, 0, 0.47867048, 0.8779946, 0, -0.8779946, 0.4786704, 0, 10, 10)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]
-transform = Transform3D(0.9971197, -0.027287815, 0.07076488, -0.07559387, -0.28187436, 0.9564688, -0.0061531435, -0.9590634, -0.28312528, 0, 0, 0)
+transform = Transform3D(0.9971197, -0.027287817, 0.070764884, -0.043874085, 0.553542, 0.831665, -0.06186565, -0.83237433, 0.55075026, 0, 0, 0)
 shadow_enabled = true
 
 [node name="StaticBody3D" parent="." unique_id=1252425372 instance=ExtResource("2_htkni")]

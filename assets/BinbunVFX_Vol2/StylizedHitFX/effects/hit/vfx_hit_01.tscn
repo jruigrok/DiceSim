@@ -234,8 +234,8 @@ _data = {
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2trc5"]
 render_priority = 0
 shader = ExtResource("3_7ctnx")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/primary_color = Color(0.49019608, 0.5058824, 1, 1)
+shader_parameter/secondary_color = Color(0, 0.3254902, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 
@@ -244,8 +244,8 @@ shader_parameter/emission_mult = 1.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pyccv"]
 render_priority = 0
 shader = ExtResource("4_05nkx")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/primary_color = Color(0.49019608, 0.5058824, 1, 1)
+shader_parameter/secondary_color = Color(0, 0.3254902, 1, 1)
 shader_parameter/emission = 4.0
 shader_parameter/emission_mult = 1.0
 shader_parameter/streaks1_count = 7.0
@@ -295,8 +295,8 @@ fill_to = Vector2(0.5, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6874"]
 render_priority = 0
 shader = ExtResource("6_x23ew")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/primary_color = Color(0.49019608, 0.5058824, 1, 1)
+shader_parameter/secondary_color = Color(0, 0.3254902, 1, 1)
 shader_parameter/emission = 0.5
 shader_parameter/emission_mult = 1.0
 shader_parameter/alpha_as_factor = true
@@ -338,8 +338,8 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05nkx"]
 render_priority = 0
 shader = ExtResource("7_7ctnx")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader_parameter/primary_color = Color(0.49019608, 0.5058824, 1, 1)
+shader_parameter/secondary_color = Color(0, 0.3254902, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 shader_parameter/star_shape = 0.59999999031412
@@ -376,8 +376,8 @@ size = Vector2(0.5, 0.5)
 
 [node name="VFXHit_01" type="Node3D" unique_id=1851836445]
 script = ExtResource("1_uno15")
-primary_color = Color(1, 1, 1, 1)
-secondary_color = Color(1, 0.8, 0.4, 1)
+primary_color = Color(0.49019608, 0.5058824, 1, 1)
+secondary_color = Color(0, 0.3254902, 1, 1)
 light_color = Color(1, 0.8, 0.4, 1)
 one_shot = true
 

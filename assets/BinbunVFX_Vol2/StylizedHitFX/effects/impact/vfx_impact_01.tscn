@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dp6fn641cy82u"]
+[gd_scene format=3 uid="uid://c25eq0qq1py5q"]
 
-[ext_resource type="Script" uid="uid://4reosifv3wb0" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/script/VFXImpactBB.gd" id="1_q6427"]
-[ext_resource type="Shader" uid="uid://be3ayayoihlk5" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_sphere.gdshader" id="2_luq7r"]
-[ext_resource type="Shader" uid="uid://dm2s8btnarvlm" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_slash.gdshader" id="3_fbxes"]
-[ext_resource type="Shader" uid="uid://cx17mwv23b2ha" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_core.gdshader" id="5_vj3r5"]
-[ext_resource type="Script" uid="uid://ipwlf330khh3" path="res://assets/BinbunVFX_Vol2/shared/script/VFXOmniLightBB.gd" id="6_q6427"]
-[ext_resource type="Shader" uid="uid://cv20ahvsbjfth" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/glow.gdshader" id="7_3ufwk"]
+[ext_resource type="Script" uid="uid://4reosifv3wb0" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/script/VFXImpactBB.gd" id="1_bt4qe"]
+[ext_resource type="Shader" uid="uid://be3ayayoihlk5" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_sphere.gdshader" id="2_u5iw0"]
+[ext_resource type="Shader" uid="uid://dm2s8btnarvlm" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_slash.gdshader" id="3_ckyq6"]
+[ext_resource type="Shader" uid="uid://cx17mwv23b2ha" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/impact_core.gdshader" id="4_n2kmo"]
+[ext_resource type="Shader" uid="uid://cv20ahvsbjfth" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/shader/glow.gdshader" id="5_sd5aw"]
+[ext_resource type="Script" uid="uid://ipwlf330khh3" path="res://assets/BinbunVFX_Vol2/shared/script/VFXOmniLightBB.gd" id="6_xgxme"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_71ved"]
 noise_type = 2
@@ -20,9 +20,9 @@ seamless_blend_skirt = 0.2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ip3vt"]
 render_priority = 0
-shader = ExtResource("2_luq7r")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader = ExtResource("2_u5iw0")
+shader_parameter/primary_color = Color(0.08235294, 0.38431373, 1, 1)
+shader_parameter/secondary_color = Color(0.81960785, 0.14509805, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 shader_parameter/alpha_as_factor = true
@@ -346,9 +346,9 @@ seamless_blend_skirt = 0.2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_38adj"]
 render_priority = 0
-shader = ExtResource("3_fbxes")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader = ExtResource("3_ckyq6")
+shader_parameter/primary_color = Color(0.08235294, 0.38431373, 1, 1)
+shader_parameter/secondary_color = Color(0.81960785, 0.14509805, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 shader_parameter/pinch_amount = 0.4
@@ -393,6 +393,7 @@ curve_y = SubResource("Curve_8sf3k")
 curve_z = SubResource("Curve_si70m")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2ukpv"]
+particle_flag_inherit_emitter_scale = true
 spread = 180.0
 initial_velocity_min = 3.0
 initial_velocity_max = 5.0
@@ -410,6 +411,7 @@ size = Vector2(0.4, 0.8)
 center_offset = Vector3(0, 0.1, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f3kk2"]
+particle_flag_inherit_emitter_scale = true
 angle_min = -720.0
 angle_max = 720.0
 spread = 180.0
@@ -441,6 +443,7 @@ point_count = 1
 curve = SubResource("Curve_0ykfm")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0ykfm"]
+particle_flag_inherit_emitter_scale = true
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_56yx0")
 alpha_curve = SubResource("CurveTexture_we5n7")
@@ -451,9 +454,9 @@ height = 0.8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ykfm"]
 render_priority = 0
-shader = ExtResource("5_vj3r5")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader = ExtResource("4_n2kmo")
+shader_parameter/primary_color = Color(0.08235294, 0.38431373, 1, 1)
+shader_parameter/secondary_color = Color(0.81960785, 0.14509805, 1, 1)
 shader_parameter/emission = 6.0
 shader_parameter/emission_mult = 1.0
 shader_parameter/alpha_as_factor = true
@@ -491,6 +494,7 @@ point_count = 3
 curve = SubResource("Curve_dl4ic")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wejg2"]
+particle_flag_inherit_emitter_scale = true
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_ro63g")
 color_ramp = SubResource("GradientTexture1D_mm7we")
@@ -501,9 +505,9 @@ size = Vector2(1.2, 1.2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6uqxu"]
 render_priority = 0
-shader = ExtResource("7_3ufwk")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader = ExtResource("5_sd5aw")
+shader_parameter/primary_color = Color(0.08235294, 0.38431373, 1, 1)
+shader_parameter/secondary_color = Color(0.81960785, 0.14509805, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 
@@ -511,9 +515,9 @@ shader_parameter/emission_mult = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3ufwk"]
 render_priority = 0
-shader = ExtResource("7_3ufwk")
-shader_parameter/primary_color = Color(1, 1, 1, 1)
-shader_parameter/secondary_color = Color(1, 0.8, 0.4, 1)
+shader = ExtResource("5_sd5aw")
+shader_parameter/primary_color = Color(0.08235294, 0.38431373, 1, 1)
+shader_parameter/secondary_color = Color(0.81960785, 0.14509805, 1, 1)
 shader_parameter/emission = 2.0
 shader_parameter/emission_mult = 1.0
 
@@ -532,6 +536,7 @@ point_count = 2
 curve = SubResource("Curve_aq5mh")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6uqxu"]
+particle_flag_inherit_emitter_scale = true
 spread = 180.0
 initial_velocity_min = -10.0
 initial_velocity_max = 10.0
@@ -544,11 +549,11 @@ radius = 0.05
 height = 0.4
 
 [node name="VFXImpactSmall_01" type="Node3D" unique_id=1738176228]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-script = ExtResource("1_q6427")
-primary_color = Color(1, 1, 1, 1)
-secondary_color = Color(1, 0.8, 0.4, 1)
-light_color = Color(1, 0.8, 0.4, 1)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_bt4qe")
+primary_color = Color(0.08235294, 0.38431373, 1, 1)
+secondary_color = Color(0.81960785, 0.14509805, 1, 1)
+light_color = Color(0.21176471, 0.23137255, 0.89411765, 1)
 one_shot = true
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=698310492]
@@ -622,11 +627,11 @@ process_material = SubResource("ParticleProcessMaterial_6uqxu")
 draw_pass_1 = SubResource("SphereMesh_v8nxm")
 
 [node name="VFXOmniLightBB" type="OmniLight3D" parent="." unique_id=1760088725]
-light_color = Color(1, 0.8, 0.4, 1)
+light_color = Color(0.21176471, 0.23137255, 0.89411765, 1)
 light_energy = 0.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
-script = ExtResource("6_q6427")
+script = ExtResource("6_xgxme")
 light_mult = 0.0
 vfx_light_energy = 4.0
 
