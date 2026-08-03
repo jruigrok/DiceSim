@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0xec5bo1xe4r"]
 
-[ext_resource type="Script" uid="uid://cuujgj2hlkld4" path="res://arena.gd" id="1_ubfh8"]
+[ext_resource type="Script" uid="uid://cuujgj2hlkld4" path="res://scripts/arena.gd" id="1_ubfh8"]
 [ext_resource type="Material" uid="uid://bjpc0yxvumrhn" path="res://materials/floor_mat.tres" id="2_444vf"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g21bf"]

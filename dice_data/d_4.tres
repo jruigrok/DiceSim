@@ -1,10 +1,31 @@
-[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://dvdgk5pv74bq2"]
+[gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://cb2aisnsrmfxc"]
 
-[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://dice_data/FaceData.gd" id="1_bjoh1"]
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://dice_data/FaceData.gd" id="1_k3qab"]
 [ext_resource type="ArrayMesh" uid="uid://cex1xgq4pjg53" path="res://dice_mesh/d_4.tres" id="2_0h4qj"]
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="2_53kvv"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="2_1isyl"]
+
+[sub_resource type="Resource" id="Resource_kjuo0"]
+script = ExtResource("1_k3qab")
+value = 2
+normal = Vector3(0.57999206, 0.7299024, -0.36173463)
+
+[sub_resource type="Resource" id="Resource_0fg0q"]
+script = ExtResource("1_k3qab")
+value = 3
+normal = Vector3(0.09371541, -0.050000466, 0.9943426)
+
+[sub_resource type="Resource" id="Resource_gg41v"]
+script = ExtResource("1_k3qab")
+value = 4
+normal = Vector3(0.25235572, -0.87166387, -0.42014146)
+
+[sub_resource type="Resource" id="Resource_4tb18"]
+script = ExtResource("1_k3qab")
+value = 1
+normal = Vector3(-0.95396125, 0.20810266, -0.2159892)
 
 [resource]
-script = ExtResource("2_53kvv")
+script = ExtResource("2_1isyl")
 name = "d_4"
+faces = Array[ExtResource("1_k3qab")]([SubResource("Resource_kjuo0"), SubResource("Resource_0fg0q"), SubResource("Resource_gg41v"), SubResource("Resource_4tb18")])
 mesh = ExtResource("2_0h4qj")

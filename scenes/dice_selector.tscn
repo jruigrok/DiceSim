@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b8mqbc133g0uo"]
+
+[ext_resource type="Script" uid="uid://b2p3cgvxaxbkm" path="res://scripts/dice_selector.gd" id="1_htwg6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_17qqn"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1160484203]
+script = ExtResource("1_htwg6")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1010021023]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=463881060]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="PowerBar" type="ProgressBar" parent="." unique_id=1344007475]
+unique_name_in_owner = true
+visible = false
+offset_left = 860.0
+offset_top = 608.0
+offset_right = 1038.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1607995549]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5
+offset_top = -1.5
+offset_right = 1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = SubResource("CanvasTexture_17qqn")

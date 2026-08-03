@@ -1,0 +1,19 @@
+extends SubViewportContainer
+class_name DicePreview
+
+var idx: int
+@onready var mesh_instance: MeshInstance3D = %MeshInstance3D
+@onready var viewport: SubViewport = %SubViewport
+
+func setup(dice_mesh: Mesh, dice_material: Material, idx: int) -> void:
+	mesh_instance.mesh = dice_mesh
+	mesh_instance.material_override = dice_material
+	self.idx = idx
+	viewport.world_3d = World3D.new()
+	viewport.size = Vector2i(80,80)
+
+func _on_select(select_idx: int) -> void:
+	viewport.transparent_bg = !(idx == select_idx)
+
+func _process(delta: float) -> void:
+	mesh_instance.rotate_z(delta / 2)

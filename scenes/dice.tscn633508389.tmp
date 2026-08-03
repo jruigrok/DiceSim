@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://crpslcouesk5p"]
+
+[ext_resource type="Script" uid="uid://ctp58ltk6axvm" path="res://scripts/dice.gd" id="1_ju2fo"]
+[ext_resource type="Script" uid="uid://cemt0bi08w6kg" path="res://scripts/roll_label.gd" id="2_mg5ex"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_psaxu"]
+bounce = 0.5
+
+[node name="Dice" type="RigidBody3D" unique_id=1974526011]
+physics_material_override = SubResource("PhysicsMaterial_psaxu")
+script = ExtResource("1_ju2fo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1339893365]
+unique_name_in_owner = true
+
+[node name="DiceMesh" type="MeshInstance3D" parent="." unique_id=1024375293]
+unique_name_in_owner = true
+
+[node name="RollLabel" type="Label3D" parent="." unique_id=313498024]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+top_level = true
+visible = false
+billboard = 1
+font_size = 200
+outline_size = 24
+script = ExtResource("2_mg5ex")
