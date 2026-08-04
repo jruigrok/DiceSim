@@ -13,7 +13,7 @@ func _unhandled_input(event):
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	elif event is InputEventMouseMotion:
+	elif Input.mouse_mode == Input.MOUSE_MODE_CAPTURED && event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * sensitivity)
 
 		pitch -= event.relative.y * sensitivity

@@ -13,7 +13,7 @@ const MAX_ROLL_VEL = 10
 
 const MAX_CHARGE := 1.5
 const MIN_SPEED := 5.0
-const MAX_SPEED := 25.0
+const MAX_SPEED := 30.0
 const LOBB_ANGLE := 15.0
 var charging := false
 var time_charging: float = 0

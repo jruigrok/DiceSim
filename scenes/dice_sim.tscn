@@ -6,8 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_hjywd"]
 [ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="5_vquxa"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
+
+[sub_resource type="Sky" id="Sky_vquxa"]
+sky_material = SubResource("ProceduralSkyMaterial_hjywd")
+
 [sub_resource type="Environment" id="Environment_ss5pj"]
-background_mode = 1
+background_mode = 2
+sky = SubResource("Sky_vquxa")
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
 
 [node name="Node3D" type="Node3D" unique_id=725421418]
 
