@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="1_4m2oy"]
 [ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_tbu3x"]
+[ext_resource type="Script" uid="uid://c2iuj0kkb2g4a" path="res://scripts/dice_behaviours/RecursionBh.gd" id="2_6bvi1"]
 [ext_resource type="Material" uid="uid://be2tbb4jbi5x8" path="res://materials/Material.011.tres" id="2_jr3dd"]
 [ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://dice_sets/DiceSet.gd" id="2_kv7s4"]
 [ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://dice_sets/DiceSetData.gd" id="2_tbu3x"]
+[ext_resource type="Material" uid="uid://bdpcjoj6ky6pa" path="res://materials/Material.003.tres" id="3_6bvi1"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="3_jcm7g"]
 [ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="4_jr3dd"]
 [ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="5_6bvi1"]
 [ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="6_jcm7g"]
@@ -12,13 +15,30 @@
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="8_josvx"]
 [ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="9_5blk3"]
 
+[sub_resource type="Resource" id="Resource_vquxa"]
+script = ExtResource("3_jcm7g")
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_jcm7g"]
+script = ExtResource("2_tbu3x")
+behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_vquxa")])
+material = ExtResource("3_6bvi1")
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
+
+[sub_resource type="Resource" id="Resource_tbu3x"]
+script = ExtResource("2_6bvi1")
+sub_dice_set_data = SubResource("Resource_jcm7g")
+sub_dice_col_layer = 4
+metadata/_custom_type_script = "uid://c2iuj0kkb2g4a"
+
 [sub_resource type="Resource" id="Resource_g3y8y"]
 script = ExtResource("2_tbu3x")
+behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_tbu3x")])
 material = ExtResource("2_jr3dd")
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]
 script = ExtResource("2_kv7s4")
-dice = Array[ExtResource("1_4m2oy")]([ExtResource("4_jr3dd"), ExtResource("5_6bvi1"), ExtResource("6_jcm7g"), ExtResource("7_efe50"), ExtResource("8_josvx"), ExtResource("9_5blk3")])
+dice = Array[ExtResource("1_4m2oy")]([ExtResource("4_jr3dd"), ExtResource("9_5blk3"), ExtResource("5_6bvi1"), ExtResource("6_jcm7g"), ExtResource("7_efe50"), ExtResource("8_josvx")])
 data = SubResource("Resource_g3y8y")
 metadata/_custom_type_script = "uid://die8svrhe3dvd"

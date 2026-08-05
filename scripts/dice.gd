@@ -28,7 +28,7 @@ func _ready() -> void:
 	mesh_instance.mesh = dice_data.mesh
 	mesh_instance.material_override = set_data.material
 	collision_shape.shape = mesh_instance.mesh.create_convex_shape()
-	set_data.handle_behaviours("on_throw", self)
+	set_data.handle_on_throw(self)
 
 func _physics_process(delta: float) -> void:
 	time_tracker += delta
@@ -48,15 +48,15 @@ func handle_state() -> void:
 			if (is_moving()):
 				time_tracker = 0
 			if (time_tracker > RESTING_TIMEOUT):
-				var roll_value = dice_data.get_best_face(
+				var roll_value: int = dice_data.get_best_face(
 					global_transform.basis).value
-				set_data.handle_behaviours("on_roll", self)
+				set_data.handle_on_roll(self, roll_value)
 				cur_state = DiceState.ROLLED
 				label.display(roll_value)
 				time_tracker = 0
 		DiceState.ROLLED:
 			if (time_tracker > HIDE_TIMEOUT):
-				set_data.handle_behaviours("on_hide", self)
+				set_data.handle_on_hide(self)
 				cur_state = DiceState.HIDDEN
 				mesh_instance.visible = false
 				label.visible = false

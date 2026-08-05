@@ -4,7 +4,7 @@ class_name DiceRoller
 var cur_dice_data: DiceData
 var cur_set_data: DiceSetData
 
-var dice_scene = preload("res://scenes/dice.tscn")
+var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
 @onready var dice_selector: DiceSelector = get_parent().get_node("DiceSelector")
 
 
@@ -17,7 +17,7 @@ const MAX_SPEED := 30.0
 const LOBB_ANGLE := 15.0
 var charging := false
 var time_charging: float = 0
-var throw_ready = false
+var throw_ready := false
 
 func _process(delta: float) -> void:
 	if charging:
@@ -32,13 +32,13 @@ func _update_dice(new_dice_data: DiceData, new_set_data: DiceSetData) -> void:
 	material_override = cur_set_data.material
 
 func throw_dice() -> void:
-	var speed = lerp(MIN_SPEED, MAX_SPEED, time_charging / MAX_CHARGE)
-	var camera = get_viewport().get_camera_3d()
+	var speed: float = lerp(MIN_SPEED, MAX_SPEED, time_charging / MAX_CHARGE)
+	var camera: Camera3D = get_viewport().get_camera_3d()
 	var forward: Vector3 = -camera.global_basis.z
 	var direction: Vector3 = forward.rotated(camera.global_basis.x, deg_to_rad(LOBB_ANGLE))
 	direction = direction.normalized()
 	
-	var dice = dice_scene.instantiate()
+	var dice: Dice = dice_scene.instantiate()
 	dice.dice_data = cur_dice_data
 	dice.set_data = cur_set_data
 	dice.linear_velocity = direction * speed
@@ -51,7 +51,7 @@ func throw_dice() -> void:
 	dice.position = get_parent().global_position + (Vector3.DOWN * 3)
 	dice_selector.power_bar.value = 0
 
-func _unhandled_input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	if throw_ready:
 		if event.is_action_pressed("throw_dice"):
 			charging = true

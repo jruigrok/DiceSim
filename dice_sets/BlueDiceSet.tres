@@ -27,6 +27,6 @@ metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]
 script = ExtResource("3_7sbdw")
-dice = Array[ExtResource("1_ca4e8")]([ExtResource("2_gh4gk"), ExtResource("7_6w8cp"), ExtResource("9_upxtw"), ExtResource("8_cm0k0"), ExtResource("10_l1v8k"), ExtResource("6_hvwbr")])
+dice = Array[ExtResource("1_ca4e8")]([ExtResource("2_gh4gk"), ExtResource("6_hvwbr"), ExtResource("7_6w8cp"), ExtResource("9_upxtw"), ExtResource("8_cm0k0"), ExtResource("10_l1v8k")])
 data = SubResource("Resource_g3y8y")
 metadata/_custom_type_script = "uid://die8svrhe3dvd"

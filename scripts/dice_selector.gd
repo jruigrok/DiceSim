@@ -7,7 +7,7 @@ class_name DiceSelector
 @onready var margin_container: MarginContainer = $MarginContainer
 @onready var power_bar: ProgressBar = %PowerBar
 @onready var dice_roller: DiceRoller = get_parent().get_node("DiceRoller")
-var preview_scene = preload("res://scenes/dice_preview.tscn")
+var preview_scene := preload("res://scenes/dice_preview.tscn")
 signal select(idx: int)
 
 func _ready() -> void:
@@ -30,5 +30,5 @@ func select_dice(idx: int) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		if event.keycode >= KEY_1 and event.keycode <= KEY_9:
-			var index = event.keycode - KEY_1
+			var index: int = event.keycode - KEY_1
 			select_dice(index)

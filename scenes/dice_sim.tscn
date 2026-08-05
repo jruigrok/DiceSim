@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b8x7qxfrvqqmi" path="res://scripts/dice_roller.gd" id="2_vquxa"]
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://scenes/arena.tscn" id="3_5ghwb"]
 [ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_hjywd"]
-[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="5_vquxa"]
+[ext_resource type="Resource" uid="uid://43wh6uliyq0k" path="res://dice_sets/RecursiveDiceSet.tres" id="4_vquxa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
 
@@ -29,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 0.47867045, -0.87799454, 0, 0.87799454, 0.47
 script = ExtResource("2_vquxa")
 
 [node name="DiceSelector" parent="Camera3D" unique_id=1160484203 instance=ExtResource("4_hjywd")]
-dice_set = ExtResource("5_vquxa")
+dice_set = ExtResource("4_vquxa")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]
 transform = Transform3D(0.9971197, -0.027287817, 0.070764884, -0.043874085, 0.553542, 0.831665, -0.06186565, -0.83237433, 0.55075026, 0, 0, 0)

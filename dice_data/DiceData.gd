@@ -6,12 +6,12 @@ class_name DiceData
 @export var mesh: Mesh
 
 func get_best_face(basis: Basis) -> FaceData:
-	var best_face = 0
-	var best_dot = -INF
+	var best_face: FaceData = null
+	var best_dot: float = -INF
 	
 	for face in faces:
-		var world_normal = basis * face.normal
-		var d = world_normal.dot(Vector3.UP)
+		var world_normal := basis * face.normal
+		var d := world_normal.dot(Vector3.UP)
 		if d > best_dot:
 			best_dot = d
 			best_face = face

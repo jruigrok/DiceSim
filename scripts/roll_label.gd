@@ -4,7 +4,7 @@ func display(value: int) -> void:
 	text = str(value)
 	visible = true
 	position = get_parent().global_position + Vector3.UP * 0.5
-	var tween = create_tween()
+	var tween: Tween = create_tween()
 	tween.tween_property(
 		self,
 		"position:y",
