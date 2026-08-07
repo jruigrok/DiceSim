@@ -10,7 +10,9 @@
 [ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="3_jcm7g"]
 [ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="4_jr3dd"]
 [ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="5_6bvi1"]
+[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/ExplosionBh.gd" id="6_efe50"]
 [ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="6_jcm7g"]
+[ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="6_josvx"]
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="7_efe50"]
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="8_josvx"]
 [ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="9_5blk3"]
@@ -31,9 +33,19 @@ sub_dice_set_data = SubResource("Resource_jcm7g")
 sub_dice_col_layer = 4
 metadata/_custom_type_script = "uid://c2iuj0kkb2g4a"
 
+[sub_resource type="Resource" id="Resource_josvx"]
+script = ExtResource("3_jcm7g")
+random_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_5ghwb"]
+script = ExtResource("6_efe50")
+explosion_effect_sc = ExtResource("6_josvx")
+metadata/_custom_type_script = "uid://gmu7hvu617rd"
+
 [sub_resource type="Resource" id="Resource_g3y8y"]
 script = ExtResource("2_tbu3x")
-behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_tbu3x")])
+behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_tbu3x"), SubResource("Resource_josvx"), SubResource("Resource_5ghwb")])
 material = ExtResource("2_jr3dd")
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 

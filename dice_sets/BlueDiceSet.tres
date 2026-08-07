@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/ExplosionBh.gd" id="2_j1oey"]
 [ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="2_udb0h"]
 [ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://dice_sets/DiceSet.gd" id="3_7sbdw"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_udb0h"]
+[ext_resource type="Script" uid="uid://bnoh1oyv4g20o" path="res://scripts/dice_behaviours/WeightedBh.gd" id="5_hvwbr"]
 [ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="6_hvwbr"]
 [ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="7_6w8cp"]
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="8_cm0k0"]
@@ -19,9 +21,19 @@ script = ExtResource("2_j1oey")
 explosion_effect_sc = ExtResource("2_udb0h")
 metadata/_custom_type_script = "uid://gmu7hvu617rd"
 
+[sub_resource type="Resource" id="Resource_vquxa"]
+script = ExtResource("4_udb0h")
+random_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_6w8cp"]
+script = ExtResource("5_hvwbr")
+weight = 0.2
+metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
+
 [sub_resource type="Resource" id="Resource_g3y8y"]
 script = ExtResource("2_7sbdw")
-behaviours = Array[ExtResource("1_gh4gk")]([SubResource("Resource_6l7yi")])
+behaviours = Array[ExtResource("1_gh4gk")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_6w8cp")])
 material = ExtResource("2_7keju")
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 

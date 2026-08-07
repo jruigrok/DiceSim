@@ -42,11 +42,6 @@ func throw_dice() -> void:
 	dice.dice_data = cur_dice_data
 	dice.set_data = cur_set_data
 	dice.linear_velocity = direction * speed
-	dice.angular_velocity = Vector3(
-		randf_range(-10, 10),
-		randf_range(-10, 10),
-		randf_range(-10, 10)
-	)
 	get_tree().current_scene.add_child(dice)
 	dice.position = get_parent().global_position + (Vector3.DOWN * 3)
 	dice_selector.power_bar.value = 0

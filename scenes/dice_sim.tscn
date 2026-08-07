@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b8x7qxfrvqqmi" path="res://scripts/dice_roller.gd" id="2_vquxa"]
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://scenes/arena.tscn" id="3_5ghwb"]
 [ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_hjywd"]
-[ext_resource type="Resource" uid="uid://43wh6uliyq0k" path="res://dice_sets/RecursiveDiceSet.tres" id="4_vquxa"]
+[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="4_vquxa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
 
