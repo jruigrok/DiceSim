@@ -7,7 +7,6 @@ class_name Dice
 
 @onready var collision_shape: CollisionShape3D = %CollisionShape3D
 @onready var mesh_instance: MeshInstance3D = %DiceMesh
-@onready var label: Label3D = %RollLabel
 
 enum DiceState {
 	ROLLING,
@@ -52,14 +51,12 @@ func handle_state() -> void:
 					global_transform.basis).value
 				set_data.handle_on_roll(self, roll_value)
 				cur_state = DiceState.ROLLED
-				label.display(roll_value)
 				time_tracker = 0
 		DiceState.ROLLED:
 			if (time_tracker > HIDE_TIMEOUT):
 				set_data.handle_on_hide(self)
 				cur_state = DiceState.HIDDEN
 				mesh_instance.visible = false
-				label.visible = false
 				time_tracker = 0
 		DiceState.HIDDEN:
 			if (time_tracker > FREE_TIMEOUT):
