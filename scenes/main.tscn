@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cj34pdrglpueo"]
+
+[ext_resource type="PackedScene" uid="uid://c0kkvfs6t36hg" path="res://scenes/dice_sim.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://cy56e02cb68ni" path="res://scripts/game_events.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://ck63j4lfwj35f" path="res://scenes/set_selector.tscn" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="4_o6xl0"]
+[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="5_tipki"]
+[ext_resource type="Resource" uid="uid://7v7sggv6nunc" path="res://dice_sets/MetalPipeDiceSet.tres" id="6_85g3d"]
+[ext_resource type="Resource" uid="uid://43wh6uliyq0k" path="res://dice_sets/RecursiveDiceSet.tres" id="7_choun"]
+[ext_resource type="Resource" uid="uid://drxu886qts1ao" path="res://dice_sets/LuckDiceSet.tres" id="8_tipki"]
+
+[node name="Main" type="Node" unique_id=1968358475]
+script = ExtResource("1_sugp2")
+
+[node name="DiceSim" parent="." unique_id=725421418 instance=ExtResource("1_0wfyh")]
+
+[node name="SetSelector" parent="." unique_id=4146138 instance=ExtResource("2_sugp2")]
+sets = Array[ExtResource("4_o6xl0")]([ExtResource("5_tipki"), ExtResource("6_85g3d"), ExtResource("7_choun"), ExtResource("8_tipki")])

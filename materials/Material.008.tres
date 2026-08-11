@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ckkvyrxbby61r"]
 
-[ext_resource type="Texture2D" uid="uid://c7d3krgvbhd4d" path="res://rpg_dice_set/textures/Material.008_baseColor.png" id="1_0w8cn"]
-[ext_resource type="Texture2D" uid="uid://7x4n1uhyky6a" path="res://rpg_dice_set/textures/Material.008_metallicRoughness.png" id="2_muk2a"]
-[ext_resource type="Texture2D" uid="uid://cdjgemcbv725v" path="res://rpg_dice_set/textures/Material.008_normal.png" id="3_w4e7e"]
+[ext_resource type="Texture2D" uid="uid://c7d3krgvbhd4d" path="res://assets/rpg_dice_set/textures/Material.008_baseColor.png" id="1_0w8cn"]
+[ext_resource type="Texture2D" uid="uid://7x4n1uhyky6a" path="res://assets/rpg_dice_set/textures/Material.008_metallicRoughness.png" id="2_muk2a"]
+[ext_resource type="Texture2D" uid="uid://cdjgemcbv725v" path="res://assets/rpg_dice_set/textures/Material.008_normal.png" id="3_w4e7e"]
 
 [resource]
 resource_name = "Material.008"

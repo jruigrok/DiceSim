@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://c0kkvfs6t36hg"]
 
+[ext_resource type="Script" uid="uid://b7ctydrdoxnf4" path="res://scripts/dice_sim.gd" id="1_5ghwb"]
 [ext_resource type="Script" uid="uid://b6p1tstsr74nv" path="res://scripts/camera_3d.gd" id="1_12od1"]
 [ext_resource type="Script" uid="uid://b8x7qxfrvqqmi" path="res://scripts/dice_roller.gd" id="2_vquxa"]
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://scenes/arena.tscn" id="3_5ghwb"]
 [ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_hjywd"]
-[ext_resource type="Resource" uid="uid://7v7sggv6nunc" path="res://dice_sets/MetalPipeDiceSet.tres" id="4_vquxa"]
+[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="6_5ghwb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
 
@@ -18,6 +19,19 @@ ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
 
 [node name="Node3D" type="Node3D" unique_id=725421418]
+script = ExtResource("1_5ghwb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]
+transform = Transform3D(0.9971197, -0.027287824, 0.070764884, -0.043874085, 0.55354196, 0.8316648, -0.06186565, -0.8323742, 0.5507503, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=945677622]
+environment = SubResource("Environment_ss5pj")
+
+[node name="Arena" parent="." unique_id=1252425372 instance=ExtResource("3_5ghwb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1921806208]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=321865442]
 transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.87799466, 0, -0.87799466, 0.4786705, 0, 10, 10)
@@ -29,16 +43,4 @@ transform = Transform3D(1, 0, 0, 0, 0.47867045, -0.87799454, 0, 0.87799454, 0.47
 script = ExtResource("2_vquxa")
 
 [node name="DiceSelector" parent="Camera3D" unique_id=1160484203 instance=ExtResource("4_hjywd")]
-dice_set = ExtResource("4_vquxa")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=826531968]
-transform = Transform3D(0.9971197, -0.027287817, 0.070764884, -0.043874085, 0.553542, 0.831665, -0.06186565, -0.83237433, 0.55075026, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=945677622]
-environment = SubResource("Environment_ss5pj")
-
-[node name="Arena" parent="." unique_id=1252425372 instance=ExtResource("3_5ghwb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
-
-[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1921806208]
+dice_set = ExtResource("6_5ghwb")

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://vqa7l7eab0uo"
-path="res://.godot/imported/u_edtmwfwu7c-metal-pipe-329305.wav-512a568962232960debb5c7ddefd891d.sample"
+path="res://.godot/imported/u_edtmwfwu7c-metal-pipe-329305.wav-b9c1c4888b21e10a52b9d4dee458356d.sample"
 
 [deps]
 
-source_file="res://Sounds/u_edtmwfwu7c-metal-pipe-329305.wav"
-dest_files=["res://.godot/imported/u_edtmwfwu7c-metal-pipe-329305.wav-512a568962232960debb5c7ddefd891d.sample"]
+source_file="res://sounds/u_edtmwfwu7c-metal-pipe-329305.wav"
+dest_files=["res://.godot/imported/u_edtmwfwu7c-metal-pipe-329305.wav-b9c1c4888b21e10a52b9d4dee458356d.sample"]
 
 [params]
 

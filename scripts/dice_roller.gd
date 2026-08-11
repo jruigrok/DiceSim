@@ -4,9 +4,9 @@ class_name DiceRoller
 var cur_dice_data: DiceData
 var cur_set_data: DiceSetData
 
+@onready var game_events: GameEvents = get_tree().current_scene
 var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
 @onready var dice_selector: DiceSelector = get_parent().get_node("DiceSelector")
-
 
 const MIN_ROLL_VEL = 5
 const MAX_ROLL_VEL = 10
@@ -18,6 +18,9 @@ const LOBB_ANGLE := 15.0
 var charging := false
 var time_charging: float = 0
 var throw_ready := false
+
+func _ready() -> void:
+	game_events.dice_set_change.connect(on_dice_set_change)
 
 func _process(delta: float) -> void:
 	if charging:
@@ -54,3 +57,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.is_action_released("throw_dice"):
 			charging = false
 			throw_dice()
+
+func on_dice_set_change(_dice_set: DiceSet) -> void:
+	cur_dice_data = null
+	cur_set_data = null
+	mesh = null
+	material_override = null
+	throw_ready = false

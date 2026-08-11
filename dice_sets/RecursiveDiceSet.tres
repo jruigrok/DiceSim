@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://43wh6uliyq0k"]
 
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://dice_data/DiceData.gd" id="1_4m2oy"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/DiceData.gd" id="1_4m2oy"]
 [ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_tbu3x"]
 [ext_resource type="Script" uid="uid://c2iuj0kkb2g4a" path="res://scripts/dice_behaviours/RecursionBh.gd" id="2_6bvi1"]
 [ext_resource type="Material" uid="uid://be2tbb4jbi5x8" path="res://materials/Material.011.tres" id="2_jr3dd"]
-[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://dice_sets/DiceSet.gd" id="2_kv7s4"]
-[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://dice_sets/DiceSetData.gd" id="2_tbu3x"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="2_kv7s4"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/DiceSetData.gd" id="2_tbu3x"]
 [ext_resource type="Material" uid="uid://bdpcjoj6ky6pa" path="res://materials/Material.003.tres" id="3_6bvi1"]
 [ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="3_jcm7g"]
 [ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="4_jr3dd"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="6_jcm7g"]
 [ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="6_josvx"]
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="7_efe50"]
+[ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="8_5blk3"]
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="8_josvx"]
 [ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="9_5blk3"]
 
@@ -43,13 +44,18 @@ script = ExtResource("6_efe50")
 explosion_effect_sc = ExtResource("6_josvx")
 metadata/_custom_type_script = "uid://gmu7hvu617rd"
 
+[sub_resource type="Resource" id="Resource_27nyo"]
+script = ExtResource("8_5blk3")
+metadata/_custom_type_script = "uid://b1pmyhx1aypfn"
+
 [sub_resource type="Resource" id="Resource_g3y8y"]
 script = ExtResource("2_tbu3x")
-behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_tbu3x"), SubResource("Resource_josvx"), SubResource("Resource_5ghwb")])
+behaviours = Array[ExtResource("1_tbu3x")]([SubResource("Resource_tbu3x"), SubResource("Resource_josvx"), SubResource("Resource_5ghwb"), SubResource("Resource_27nyo")])
 material = ExtResource("2_jr3dd")
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]
+resource_name = "Recursive Dice Set"
 script = ExtResource("2_kv7s4")
 dice = Array[ExtResource("1_4m2oy")]([ExtResource("4_jr3dd"), ExtResource("9_5blk3"), ExtResource("5_6bvi1"), ExtResource("6_jcm7g"), ExtResource("7_efe50"), ExtResource("8_josvx")])
 data = SubResource("Resource_g3y8y")

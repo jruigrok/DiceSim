@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dxfmldqdc4j3o"]
-
-[ext_resource type="ArrayMesh" uid="uid://vsuvus6a6eqv" path="res://dice_mesh/d_20.tres" id="1_x1i2c"]
-[ext_resource type="Script" uid="uid://dihk5pabkn5a6" path="res://dice_mesh/NormFromMesh.gd" id="4_2iqsw"]
-
-[node name="LP_Material_001_0" type="MeshInstance3D" unique_id=1205416042]
-mesh = ExtResource("1_x1i2c")
-script = ExtResource("4_2iqsw")
-dice_data_path = "res://dice_data/D20.tres"
