@@ -3,12 +3,11 @@ class_name DiceSelector
 
 @export var dice_set: DiceSet
 
-@onready var game_events: GameEvents = get_tree().current_scene
 @onready var h_box_container: HBoxContainer = $MarginContainer/HBoxContainer
 @onready var margin_container: MarginContainer = $MarginContainer
 @onready var power_bar: ProgressBar = %PowerBar
 @onready var dice_roller: DiceRoller = get_parent().get_node("DiceRoller")
-var preview_scene := preload("res://scenes/dice_preview.tscn")
+var preview_scene := preload("uid://dclypq33xt5mr")
 signal select(idx: int)
 
 func _ready() -> void:
@@ -18,7 +17,7 @@ func _ready() -> void:
 	margin_container.add_theme_constant_override("margin_bottom", 10)
 	setup_previews()
 	
-	game_events.dice_set_change.connect(on_dice_set_change)
+	GameEvents.dice_set_change.connect(on_dice_set_change)
 
 func on_dice_set_change(new_dice_set: DiceSet) -> void:
 	dice_set = new_dice_set

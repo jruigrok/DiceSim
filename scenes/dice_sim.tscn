@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://c0kkvfs6t36hg"]
 
 [ext_resource type="Script" uid="uid://b7ctydrdoxnf4" path="res://scripts/dice_sim.gd" id="1_5ghwb"]
-[ext_resource type="Script" uid="uid://b6p1tstsr74nv" path="res://scripts/camera_3d.gd" id="1_12od1"]
-[ext_resource type="Script" uid="uid://b8x7qxfrvqqmi" path="res://scripts/dice_roller.gd" id="2_vquxa"]
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://scenes/arena.tscn" id="3_5ghwb"]
-[ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_hjywd"]
-[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="6_5ghwb"]
+[ext_resource type="PackedScene" uid="uid://t6iot3y2j1rj" path="res://scenes/player.tscn" id="3_jd2gm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
 
@@ -33,14 +30,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1921806208]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=321865442]
-transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.87799466, 0, -0.87799466, 0.4786705, 0, 10, 10)
-current = true
-script = ExtResource("1_12od1")
-
-[node name="DiceRoller" type="MeshInstance3D" parent="Camera3D" unique_id=275619940]
-transform = Transform3D(1, 0, 0, 0, 0.47867045, -0.87799454, 0, 0.87799454, 0.47867045, 5, -2.5, -6)
-script = ExtResource("2_vquxa")
-
-[node name="DiceSelector" parent="Camera3D" unique_id=1160484203 instance=ExtResource("4_hjywd")]
-dice_set = ExtResource("6_5ghwb")
+[node name="Player" parent="." unique_id=1512474498 instance=ExtResource("3_jd2gm")]
+transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.8779946, 0, -0.8779946, 0.4786705, 0, 10, 10)

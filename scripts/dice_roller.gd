@@ -4,7 +4,6 @@ class_name DiceRoller
 var cur_dice_data: DiceData
 var cur_set_data: DiceSetData
 
-@onready var game_events: GameEvents = get_tree().current_scene
 var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
 @onready var dice_selector: DiceSelector = get_parent().get_node("DiceSelector")
 
@@ -20,7 +19,7 @@ var time_charging: float = 0
 var throw_ready := false
 
 func _ready() -> void:
-	game_events.dice_set_change.connect(on_dice_set_change)
+	GameEvents.dice_set_change.connect(on_dice_set_change)
 
 func _process(delta: float) -> void:
 	if charging:
