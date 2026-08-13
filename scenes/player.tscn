@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://t6iot3y2j1rj"]
 
 [ext_resource type="Script" uid="uid://b6p1tstsr74nv" path="res://scripts/player.gd" id="1_dqkch"]
-[ext_resource type="Script" uid="uid://b8x7qxfrvqqmi" path="res://scripts/dice_roller.gd" id="2_qlg0r"]
-[ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="3_tuyoq"]
-[ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="4_fjrip"]
+[ext_resource type="PackedScene" uid="uid://pc87ipin6rhm" path="res://scenes/dice_roller.tscn" id="2_g2els"]
 
-[node name="Camera3D" type="Camera3D" unique_id=1512474498]
+[node name="Player" type="Camera3D" unique_id=1512474498]
 transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.87799466, 0, -0.87799466, 0.4786705, 0, 0, 0)
 current = true
 script = ExtResource("1_dqkch")
 
-[node name="DiceRoller" type="MeshInstance3D" parent="." unique_id=1405390018]
-transform = Transform3D(1, 0, 0, 0, 0.47867045, -0.87799454, 0, 0.87799454, 0.47867045, 5, -2.5, -6)
-script = ExtResource("2_qlg0r")
-
-[node name="DiceSelector" parent="." unique_id=1160484203 instance=ExtResource("3_tuyoq")]
-dice_set = ExtResource("4_fjrip")
+[node name="DiceRoller" parent="." unique_id=1125792657 instance=ExtResource("2_g2els")]
+transform = Transform3D(1, 0, 0, 0, 0.47867042, -0.8779944, 0, 0.8779944, 0.47867042, 5, -2.5, -6)

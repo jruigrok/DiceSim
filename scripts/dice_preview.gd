@@ -12,8 +12,8 @@ func setup(dice_mesh: Mesh, dice_material: Material, idx_: int) -> void:
 	viewport.world_3d = World3D.new()
 	viewport.size = Vector2i(80,80)
 
-func _on_select(select_idx: int) -> void:
-	viewport.transparent_bg = !(idx == select_idx)
+func update_dice(dice_idx: int) -> void:
+	viewport.transparent_bg = !(idx == dice_idx)
 
 func _process(delta: float) -> void:
 	mesh_instance.rotate_z(delta / 2)

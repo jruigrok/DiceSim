@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://ck63j4lfwj35f"]
 
 [ext_resource type="Script" uid="uid://dhvx4jrbqkjc2" path="res://scripts/set_selector.gd" id="1_li4o2"]
-[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="2_55ih3"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=4146138]
+[node name="SetSelector" type="CanvasLayer" unique_id=4146138]
 script = ExtResource("1_li4o2")
-sets = Array[ExtResource("2_55ih3")]([null])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=116218059]
 anchors_preset = 15

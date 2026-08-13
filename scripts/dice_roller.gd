@@ -5,7 +5,7 @@ var cur_dice_data: DiceData
 var cur_set_data: DiceSetData
 
 var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
-@onready var dice_selector: DiceSelector = get_parent().get_node("DiceSelector")
+@onready var power_bar: ProgressBar = %PowerBar
 
 const MIN_ROLL_VEL = 5
 const MAX_ROLL_VEL = 10
@@ -20,18 +20,12 @@ var throw_ready := false
 
 func _ready() -> void:
 	GameEvents.dice_set_change.connect(on_dice_set_change)
+	GameEvents.update_dice.connect(on_update_dice)
 
 func _process(delta: float) -> void:
 	if charging:
 		time_charging = min(time_charging + delta, MAX_CHARGE)
-		dice_selector.power_bar.value = (time_charging / MAX_CHARGE) * 100
-
-func _update_dice(new_dice_data: DiceData, new_set_data: DiceSetData) -> void:
-	throw_ready = true
-	cur_dice_data = new_dice_data
-	cur_set_data = new_set_data
-	mesh = cur_dice_data.mesh
-	material_override = cur_set_data.material
+		power_bar.value = (time_charging / MAX_CHARGE) * 100
 
 func throw_dice() -> void:
 	var speed: float = lerp(MIN_SPEED, MAX_SPEED, time_charging / MAX_CHARGE)
@@ -46,7 +40,7 @@ func throw_dice() -> void:
 	dice.linear_velocity = direction * speed
 	get_tree().current_scene.add_child(dice)
 	dice.position = get_parent().global_position + (Vector3.DOWN * 3)
-	dice_selector.power_bar.value = 0
+	power_bar.value = 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if throw_ready:
@@ -63,3 +57,12 @@ func on_dice_set_change(_dice_set: DiceSet) -> void:
 	mesh = null
 	material_override = null
 	throw_ready = false
+	power_bar.visible = false
+
+func on_update_dice(new_dice_data: DiceData, new_set_data: DiceSetData) -> void:
+	throw_ready = true
+	cur_dice_data = new_dice_data
+	cur_set_data = new_set_data
+	mesh = cur_dice_data.mesh
+	material_override = cur_set_data.material
+	power_bar.visible = true
