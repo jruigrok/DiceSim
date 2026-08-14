@@ -3,6 +3,7 @@ class_name SoundOnColBh
 
 @export var audio_stream: AudioStream
 @export var cooldown := 0.05
+@export var vel_threshold := 3.0
 
 func on_throw(dice: Dice) -> void:
 	dice.contact_monitor = true
@@ -18,7 +19,9 @@ func on_throw(dice: Dice) -> void:
 	
 	dice.body_entered.connect(
 		func(_body: Node) -> void:
-			if timer.is_stopped():
+			if timer.is_stopped() && (
+					dice.linear_velocity.length_squared() > 
+					vel_threshold * vel_threshold):
 				timer.start()
 				audio_stream_player.play()
 	)

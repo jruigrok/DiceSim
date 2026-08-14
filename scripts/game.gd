@@ -9,3 +9,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			GameEvents.GameState.DICE_SIM:
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				GameEvents.change_game_state(GameEvents.GameState.SET_SELECTOR)
+
+func _ready() -> void:
+	GameEvents.game_ready.emit()

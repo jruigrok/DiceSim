@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://drxu886qts1ao"]
+
+[ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_os8wr"]
+[ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="2_7vadv"]
+[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/ExplosionBh.gd" id="3_35ydv"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_bfq67"]
+[ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="5_k4cny"]
+[ext_resource type="Script" uid="uid://bnoh1oyv4g20o" path="res://scripts/dice_behaviours/WeightedBh.gd" id="6_yr3fb"]
+[ext_resource type="Material" uid="uid://d4gaw8goqiei4" path="res://materials/Material.004.tres" id="7_mu2xu"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/DiceSetData.gd" id="8_mmc5e"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/DiceData.gd" id="9_ir3c8"]
+[ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="10_j6t5b"]
+[ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="11_vb1h4"]
+[ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="12_l1rjw"]
+[ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="13_3fbmm"]
+[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="14_e7g3r"]
+[ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="15_8k6o6"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="16_dtbx4"]
+
+[sub_resource type="Resource" id="Resource_6l7yi"]
+script = ExtResource("3_35ydv")
+explosion_effect_sc = ExtResource("2_7vadv")
+metadata/_custom_type_script = "uid://gmu7hvu617rd"
+
+[sub_resource type="Resource" id="Resource_vquxa"]
+script = ExtResource("4_bfq67")
+random_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_5ghwb"]
+script = ExtResource("5_k4cny")
+metadata/_custom_type_script = "uid://b1pmyhx1aypfn"
+
+[sub_resource type="Resource" id="Resource_hwufy"]
+script = ExtResource("6_yr3fb")
+metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
+
+[sub_resource type="Resource" id="Resource_g3y8y"]
+script = ExtResource("8_mmc5e")
+behaviours = Array[ExtResource("1_os8wr")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
+material = ExtResource("7_mu2xu")
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
+
+[resource]
+resource_name = "Lucky Dice Set"
+script = ExtResource("16_dtbx4")
+dice = Array[ExtResource("9_ir3c8")]([ExtResource("10_j6t5b"), ExtResource("11_vb1h4"), ExtResource("12_l1rjw"), ExtResource("13_3fbmm"), ExtResource("14_e7g3r"), ExtResource("15_8k6o6")])
+data = SubResource("Resource_g3y8y")
+metadata/_custom_type_script = "uid://die8svrhe3dvd"

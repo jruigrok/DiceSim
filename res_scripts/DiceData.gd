@@ -17,3 +17,19 @@ func get_best_face(basis: Basis) -> FaceData:
 			best_face = face
 	
 	return best_face
+
+func get_min_face() -> FaceData:
+	if faces == null:
+		push_error("missing faces")
+	var min_face: FaceData = faces[0]
+	for face in faces:
+		min_face = min_face if min_face.value < face.value else face
+	return min_face
+
+func get_max_face() -> FaceData:
+	if faces == null:
+		push_error("missing faces")
+	var max_face: FaceData = faces[0]
+	for face in faces:
+		max_face = max_face if max_face.value > face.value else face
+	return max_face

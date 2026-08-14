@@ -31,7 +31,7 @@ metadata/_custom_type_script = "uid://cfays247nwmc1"
 [sub_resource type="Resource" id="Resource_b7e8w"]
 script = ExtResource("6_0d552")
 audio_stream = ExtResource("5_wdp6p")
-cooldown = 0.5
+cooldown = 0.2
 metadata/_custom_type_script = "uid://g4qddmyllwfl"
 
 [sub_resource type="Resource" id="Resource_27nyo"]
