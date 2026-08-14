@@ -1,19 +1,14 @@
 extends CanvasLayer
 class_name DiceSelector
 
-@export var dice_set: DiceSet
+var dice_set: DiceSet = null
 
 @onready var h_box_container: HBoxContainer = $MarginContainer/HBoxContainer
 @onready var margin_container: MarginContainer = $MarginContainer
 var preview_scene := preload("uid://dclypq33xt5mr")
 
 func _ready() -> void:
-	if dice_set == null:
-		push_error("No dice set assigned")
-		return
 	margin_container.add_theme_constant_override("margin_bottom", 10)
-	setup_previews()
-	
 	GameEvents.dice_set_change.connect(on_dice_set_change)
 
 func on_dice_set_change(new_dice_set: DiceSet) -> void:
@@ -33,7 +28,7 @@ func setup_previews() -> void:
 		preview.add_to_group("dice previews")
 
 func select_dice(idx: int) -> void:
-	if idx < dice_set.dice.size():
+	if dice_set != null && idx < dice_set.dice.size():
 		GameEvents.update_dice.emit(dice_set.dice[idx], dice_set.data)
 		get_tree().call_group("dice previews", "update_dice", idx)
 
