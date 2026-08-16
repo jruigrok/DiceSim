@@ -39,6 +39,7 @@ metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 script = ExtResource("8_mmc5e")
 behaviours = Array[ExtResource("1_os8wr")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
 material = ExtResource("7_mu2xu")
+description = "Dont bring these to a casino. Weighted dice to be lucky."
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]

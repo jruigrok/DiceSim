@@ -40,6 +40,7 @@ metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 script = ExtResource("8_8l1lu")
 behaviours = Array[ExtResource("1_vl1tm")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
 material = ExtResource("7_vl1tm")
+description = "Dice when I roll them for some reason."
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]

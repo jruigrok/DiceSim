@@ -20,6 +20,7 @@ func _ready() -> void:
 			func () -> void:
 				GameEvents.dice_set_change.emit(dice_set)
 		)
+		button.tooltip_text = dice_set.data.description
 		vbox_container.add_child(button)
 
 func on_game_state_change(game_state: GameEvents.GameState) -> void:

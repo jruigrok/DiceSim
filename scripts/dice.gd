@@ -7,6 +7,7 @@ class_name Dice
 
 @onready var collision_shape: CollisionShape3D = %CollisionShape3D
 @onready var mesh_instance: MeshInstance3D = %DiceMesh
+static var dice_scene := preload("uid://crpslcouesk5p")
 
 enum DiceState {
 	ROLLING,
@@ -22,6 +23,12 @@ const FREE_TIMEOUT: float = 5
 const MIN_Y_BOUND = -20.0
 var time_tracker: float = 0.0
 var cur_state: DiceState = DiceState.ROLLING
+
+static func new_dice(_dice_data: DiceData, _set_data: DiceSetData) -> Dice:
+	var dice: Dice = dice_scene.instantiate()
+	dice.set_data = _set_data
+	dice.dice_data = _dice_data
+	return dice
 
 func _ready() -> void:
 	mesh_instance.mesh = dice_data.mesh

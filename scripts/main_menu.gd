@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends VBoxContainer
 class_name Main_Menu
 
 @onready var play_button := %PlayButton

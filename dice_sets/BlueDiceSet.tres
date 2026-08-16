@@ -34,6 +34,7 @@ metadata/_custom_type_script = "uid://b1pmyhx1aypfn"
 script = ExtResource("2_7sbdw")
 behaviours = Array[ExtResource("1_gh4gk")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb")])
 material = ExtResource("2_7keju")
+description = "I mean... Its blue..."
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]

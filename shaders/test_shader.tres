@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dl6r6nmhrf48e"]
+
+[ext_resource type="Shader" uid="uid://ceuwvmocqo0hm" path="res://shaders/test_shader.gdshader" id="1_3qlbb"]
+[ext_resource type="Texture2D" uid="uid://7l6dvo4r8fgl" path="res://shaders/Purple Nebula 4 - 1024x1024.png" id="2_mjdhw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3qlbb")
+shader_parameter/space_texture = ExtResource("2_mjdhw")
+shader_parameter/speed = 0.02

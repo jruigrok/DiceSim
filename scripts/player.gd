@@ -6,7 +6,6 @@ var pitch := rotation.x
 var cur_dice_data: DiceData
 var cur_set_data: DiceSetData
 
-var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
 @onready var power_bar: ProgressBar = %PowerBar
 @onready var cur_dice_mesh: MeshInstance3D = %CurDiceMesh
 
@@ -52,9 +51,7 @@ func throw_dice() -> void:
 	var direction: Vector3 = forward.rotated(camera.global_basis.x, deg_to_rad(LOBB_ANGLE))
 	direction = direction.normalized()
 	
-	var dice: Dice = dice_scene.instantiate()
-	dice.dice_data = cur_dice_data
-	dice.set_data = cur_set_data
+	var dice: Dice = Dice.new_dice(cur_dice_data, cur_set_data)
 	dice.linear_velocity = direction * speed
 	get_parent().add_child(dice)
 	dice.position = global_position + (Vector3.DOWN * 3)
