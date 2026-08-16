@@ -37,6 +37,7 @@ weight_face = 1
 metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 
 [sub_resource type="Resource" id="Resource_g3y8y"]
+resource_name = "Unlucky Dice Set"
 script = ExtResource("8_8l1lu")
 behaviours = Array[ExtResource("1_vl1tm")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
 material = ExtResource("7_vl1tm")

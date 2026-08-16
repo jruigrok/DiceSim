@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ck63j4lfwj35f"]
 
-[ext_resource type="Script" uid="uid://dhvx4jrbqkjc2" path="res://scripts/set_selector.gd" id="1_li4o2"]
+[ext_resource type="Script" uid="uid://dhvx4jrbqkjc2" path="res://scripts/in_game_menu.gd" id="1_li4o2"]
 [ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="2_exnol"]
 [ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="3_kqt2u"]
 
-[node name="SetSelector" type="CanvasLayer" unique_id=4146138]
+[node name="InGameMenu" type="CanvasLayer" unique_id=4146138]
 script = ExtResource("1_li4o2")
 sets = Array[ExtResource("2_exnol")]([ExtResource("3_kqt2u")])
 
@@ -16,20 +16,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.218301, 0.218301, 0.21830097, 0.49019608)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=734174887]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1735732199]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -150.0
-offset_right = 100.0
-offset_bottom = 150.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=635117013]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=734174887]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+
+[node name="SetSelectorContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=635117013]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1085414367]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Exit"

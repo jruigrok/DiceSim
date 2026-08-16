@@ -25,7 +25,7 @@ value = 1
 normal = Vector3(-0.95396125, 0.20810266, -0.2159892)
 
 [resource]
+resource_name = "d_4"
 script = ExtResource("2_1isyl")
-name = "d_4"
 faces = Array[ExtResource("1_k3qab")]([SubResource("Resource_kjuo0"), SubResource("Resource_0fg0q"), SubResource("Resource_gg41v"), SubResource("Resource_4tb18")])
 mesh = ExtResource("2_0h4qj")

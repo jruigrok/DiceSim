@@ -36,6 +36,7 @@ script = ExtResource("6_yr3fb")
 metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 
 [sub_resource type="Resource" id="Resource_g3y8y"]
+resource_name = "Lucky Dice Set"
 script = ExtResource("8_mmc5e")
 behaviours = Array[ExtResource("1_os8wr")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
 material = ExtResource("7_mu2xu")

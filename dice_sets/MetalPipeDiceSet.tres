@@ -39,6 +39,7 @@ script = ExtResource("7_0d552")
 metadata/_custom_type_script = "uid://b1pmyhx1aypfn"
 
 [sub_resource type="Resource" id="Resource_g3y8y"]
+resource_name = "Metal Pipe Dice Set"
 script = ExtResource("7_oiwkq")
 behaviours = Array[ExtResource("1_yecg8")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_b7e8w"), SubResource("Resource_27nyo")])
 material = ExtResource("8_0d552")

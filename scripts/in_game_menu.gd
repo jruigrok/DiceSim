@@ -1,7 +1,8 @@
 extends CanvasLayer
-class_name SetSelector
+class_name InGameMenu
 
-@onready var vbox_container := %VBoxContainer
+@onready var set_selector_container := %SetSelectorContainer
+@onready var exit_button := %ExitButton
 
 @export var sets: Array[DiceSet]
 const BUTTON_SIZE := Vector2i(200,50)
@@ -21,11 +22,16 @@ func _ready() -> void:
 				GameEvents.dice_set_change.emit(dice_set)
 		)
 		button.tooltip_text = dice_set.data.description
-		vbox_container.add_child(button)
+		set_selector_container.add_child(button)
+	
+	exit_button.pressed.connect(on_exit_pressed)
 
 func on_game_state_change(game_state: GameEvents.GameState) -> void:
 	match (game_state):
-		GameEvents.GameState.SET_SELECTOR:
+		GameEvents.GameState.GAME_MENU:
 			visible = true
 		GameEvents.GameState.DICE_SIM:
 			visible = false
+
+func on_exit_pressed() -> void:
+	GameEvents.change_to_main_menu_scene()

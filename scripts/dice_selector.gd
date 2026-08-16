@@ -10,6 +10,7 @@ var preview_scene := preload("uid://dclypq33xt5mr")
 func _ready() -> void:
 	margin_container.add_theme_constant_override("margin_bottom", 10)
 	GameEvents.dice_set_change.connect(on_dice_set_change)
+	GameEvents.dice_rolled.connect(on_dice_rolled)
 
 func on_dice_set_change(new_dice_set: DiceSet) -> void:
 	dice_set = new_dice_set
@@ -19,6 +20,9 @@ func on_dice_set_change(new_dice_set: DiceSet) -> void:
 			child.queue_free()
 	
 	setup_previews()
+
+func on_dice_rolled(_dice_data: DiceData, _dice_set: DiceSetData, value: int) -> void:
+	print("Dice: %s, from set: %s, rolled value: %d" % [_dice_data.resource_name, _dice_set.resource_name, value])
 
 func setup_previews() -> void:
 	for i in range(dice_set.dice.size()):
