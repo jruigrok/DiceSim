@@ -29,15 +29,48 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=734174887]
-custom_minimum_size = Vector2(200, 300)
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer" unique_id=1081960521]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+current_tab = 0
+
+[node name="Set Selector" type="ScrollContainer" parent="VBoxContainer/TabContainer" unique_id=734174887]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="SetSelectorContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Set Selector" unique_id=635117013]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 
-[node name="SetSelectorContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=635117013]
+[node name="Roll History" type="ScrollContainer" parent="VBoxContainer/TabContainer" unique_id=1758630436]
+visible = false
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TabContainer/Roll History" unique_id=315555166]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="RollHistoryContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Roll History/MarginContainer" unique_id=885975219]
 unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stats" type="ScrollContainer" parent="VBoxContainer/TabContainer" unique_id=411496212]
+visible = false
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Stats" unique_id=820705918]
 layout_mode = 2
 
 [node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1085414367]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Exit"
