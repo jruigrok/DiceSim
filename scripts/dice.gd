@@ -58,6 +58,7 @@ func handle_state() -> void:
 					global_transform.basis).value
 				set_data.handle_on_roll(self, roll_value)
 				GameEvents.dice_rolled.emit(dice_data, set_data, roll_value)
+				GameEvents.add_stat(dice_data, set_data, roll_value)
 				cur_state = DiceState.ROLLED
 				time_tracker = 0
 		DiceState.ROLLED:

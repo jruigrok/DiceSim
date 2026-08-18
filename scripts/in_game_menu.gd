@@ -3,6 +3,7 @@ class_name InGameMenu
 
 @onready var set_selector_container := %SetSelectorContainer
 @onready var roll_history_container := %RollHistoryContainer
+@onready var stats_container := %StatsContainer
 @onready var exit_button := %ExitButton
 
 @export var sets: Array[DiceSet]
@@ -31,6 +32,7 @@ func on_game_state_change(game_state: GameEvents.GameState) -> void:
 	match (game_state):
 		GameEvents.GameState.GAME_MENU:
 			update_roll_history()
+			update_stats()
 			visible = true
 		GameEvents.GameState.DICE_SIM:
 			visible = false
@@ -50,3 +52,32 @@ func update_roll_history() -> void:
 			[dice_roll.dice_set_name, dice_roll.dice_name, dice_roll.roll]
 		)
 		roll_history_container.add_child(label)
+
+func update_stats() -> void:
+	for child in stats_container.get_children():
+		child.queue_free()
+	
+	var make_foldable := func(title: String) -> FoldableContainer:
+		var foldable_container := FoldableContainer.new()
+		foldable_container.folded = true
+		foldable_container.title = title
+		foldable_container.add_theme_font_size_override("Font Size", 10)
+		return foldable_container
+	
+	for dice_set_name: String in GameEvents.stats_dict:
+		var set_foldable_container: FoldableContainer = make_foldable.call(dice_set_name)
+		stats_container.add_child(set_foldable_container)
+		var set_vbox := VBoxContainer.new()
+		set_foldable_container.add_child(set_vbox)
+		for dice_name: String in GameEvents.stats_dict[dice_set_name]:
+			var dice_foldable_container: FoldableContainer = make_foldable.call(dice_name)
+			set_vbox.add_child(dice_foldable_container)
+			var stats_string := ""
+			for stat_name: Variant in GameEvents.stats_dict[dice_set_name][dice_name]:
+				var stat: Variant = GameEvents.stats_dict[dice_set_name][dice_name][stat_name]
+				if not stats_string.is_empty():
+					stats_string += "\n"
+				stats_string += "%s: %s" % [str(stat_name), str(stat)]
+			var label := Label.new()
+			label.text = stats_string
+			dice_foldable_container.add_child(label)
