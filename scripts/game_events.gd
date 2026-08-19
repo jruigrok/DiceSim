@@ -1,6 +1,7 @@
 extends Node
 
 const STATS_FILE_PATH := "user://stats.save"
+const FONT_SIZE := 10
 
 @warning_ignore("unused_signal")
 signal dice_set_change(dice_set: DiceSet)

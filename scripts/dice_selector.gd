@@ -23,7 +23,7 @@ func on_dice_set_change(new_dice_set: DiceSet) -> void:
 
 func on_dice_rolled(_dice_data: DiceData, _dice_set: DiceSetData, roll: int) -> void:
 	var label := Label.new()
-	label.add_theme_font_size_override("font_size", 10)
+	label.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
 	label.text = "%s: %s, roll: %d" % (
 		[_dice_set.resource_name, _dice_data.resource_name, roll]
 	)

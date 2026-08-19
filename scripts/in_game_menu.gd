@@ -47,7 +47,7 @@ func update_roll_history() -> void:
 	for i in range(GameEvents.roll_history.history.size() - 1, -1, -1):
 		var dice_roll := GameEvents.roll_history.history[i]
 		var label := Label.new()
-		label.add_theme_font_size_override("font_size", 10)
+		label.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
 		label.text = "%s: %s, roll: %d" % (
 			[dice_roll.dice_set_name, dice_roll.dice_name, dice_roll.roll]
 		)
@@ -61,14 +61,17 @@ func update_stats() -> void:
 		var foldable_container := FoldableContainer.new()
 		foldable_container.folded = true
 		foldable_container.title = title
-		foldable_container.add_theme_font_size_override("Font Size", 10)
+		foldable_container.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
 		return foldable_container
 	
 	for dice_set_name: String in GameEvents.stats_dict:
 		var set_foldable_container: FoldableContainer = make_foldable.call(dice_set_name)
 		stats_container.add_child(set_foldable_container)
 		var set_vbox := VBoxContainer.new()
-		set_foldable_container.add_child(set_vbox)
+		var set_margin := MarginContainer.new()
+		set_margin.add_theme_constant_override("margin_left", 20)
+		set_foldable_container.add_child(set_margin)
+		set_margin.add_child(set_vbox)
 		for dice_name: String in GameEvents.stats_dict[dice_set_name]:
 			var dice_foldable_container: FoldableContainer = make_foldable.call(dice_name)
 			set_vbox.add_child(dice_foldable_container)
@@ -80,4 +83,5 @@ func update_stats() -> void:
 				stats_string += "%s: %s" % [str(stat_name), str(stat)]
 			var label := Label.new()
 			label.text = stats_string
+			label.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
 			dice_foldable_container.add_child(label)
