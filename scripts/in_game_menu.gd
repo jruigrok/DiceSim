@@ -64,7 +64,15 @@ func update_stats() -> void:
 		foldable_container.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
 		return foldable_container
 	
+	var make_label := func(text: String) -> Label:
+		var label := Label.new()
+		label.text = text
+		label.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
+		return label
+	
+	var total_rolls: int = 0
 	for dice_set_name: String in GameEvents.stats_dict:
+		var set_rolls: int = 0
 		var set_foldable_container: FoldableContainer = make_foldable.call(dice_set_name)
 		stats_container.add_child(set_foldable_container)
 		var set_vbox := VBoxContainer.new()
@@ -73,15 +81,24 @@ func update_stats() -> void:
 		set_foldable_container.add_child(set_margin)
 		set_margin.add_child(set_vbox)
 		for dice_name: String in GameEvents.stats_dict[dice_set_name]:
+			var dice_rolls: int = 0
+			var total_roll_value: int = 0
 			var dice_foldable_container: FoldableContainer = make_foldable.call(dice_name)
+			var dice_vbox := VBoxContainer.new()
 			set_vbox.add_child(dice_foldable_container)
+			dice_foldable_container.add_child(dice_vbox)
 			var stats_string := ""
-			for stat_name: Variant in GameEvents.stats_dict[dice_set_name][dice_name]:
-				var stat: Variant = GameEvents.stats_dict[dice_set_name][dice_name][stat_name]
+			for roll_value: String in GameEvents.stats_dict[dice_set_name][dice_name]:
+				var num_rolls: int = GameEvents.stats_dict[dice_set_name][dice_name][roll_value] as int
+				dice_rolls += num_rolls
+				total_roll_value += num_rolls * int(roll_value)
 				if not stats_string.is_empty():
 					stats_string += "\n"
-				stats_string += "%s: %s" % [str(stat_name), str(stat)]
-			var label := Label.new()
-			label.text = stats_string
-			label.add_theme_font_size_override("font_size", GameEvents.FONT_SIZE)
-			dice_foldable_container.add_child(label)
+				stats_string += "%s: %d" % [roll_value, num_rolls]
+			set_rolls += dice_rolls
+			dice_vbox.add_child(make_label.call(stats_string))
+			dice_vbox.add_child(make_label.call("num rolls: %d" % [dice_rolls]))
+			dice_vbox.add_child(make_label.call("avg roll: %.2f" % [total_roll_value as float / dice_rolls]))
+		total_rolls += set_rolls
+		set_vbox.add_child(make_label.call("num rolls: %d" % [set_rolls]))
+	stats_container.add_child(make_label.call("num rolls: %d" % [total_rolls]))

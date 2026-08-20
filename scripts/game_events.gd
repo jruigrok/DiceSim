@@ -56,7 +56,7 @@ func add_stat(dice_data: DiceData, dice_set: DiceSetData, roll: int) -> void:
 		stats_dict[dice_set_name][dice_name] = {}
 
 	var rolls: Dictionary = stats_dict[dice_set_name][dice_name]
-	rolls[roll] = rolls.get(roll, 0) + 1
+	rolls[str(roll)] = rolls.get(str(roll), 0) + 1
 
 func load_stats() -> void:
 	if FileAccess.file_exists(STATS_FILE_PATH):
