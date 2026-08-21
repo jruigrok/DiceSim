@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://cb2aisnsrmfxc"]
 
-[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://res_scripts/FaceData.gd" id="1_k3qab"]
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://res_scripts/face_data.gd" id="1_k3qab"]
 [ext_resource type="ArrayMesh" uid="uid://cex1xgq4pjg53" path="res://dice_mesh/d_4.tres" id="2_0h4qj"]
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/DiceData.gd" id="2_1isyl"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="2_1isyl"]
 
 [sub_resource type="Resource" id="Resource_kjuo0"]
 script = ExtResource("1_k3qab")

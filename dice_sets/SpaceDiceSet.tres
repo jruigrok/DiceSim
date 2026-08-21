@@ -6,15 +6,15 @@
 [ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_p6586"]
 [ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="5_eikoo"]
 [ext_resource type="Material" uid="uid://dl6r6nmhrf48e" path="res://shaders/test_shader.tres" id="6_l8l6v"]
-[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/DiceSetData.gd" id="7_esnq5"]
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/DiceData.gd" id="8_vvnlf"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/dice_set_data.gd" id="7_esnq5"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="8_vvnlf"]
 [ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="9_na3hg"]
 [ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="10_xqo6r"]
 [ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="11_e6caa"]
 [ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="12_o5qyc"]
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="13_ti8r0"]
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="14_45q14"]
-[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="15_pdwb3"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="15_pdwb3"]
 
 [sub_resource type="Resource" id="Resource_6l7yi"]
 script = ExtResource("3_rq1i0")

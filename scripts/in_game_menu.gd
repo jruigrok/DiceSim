@@ -71,6 +71,7 @@ func update_stats() -> void:
 		return label
 	
 	var total_rolls: int = 0
+	
 	for dice_set_name: String in GameEvents.stats_dict:
 		var set_rolls: int = 0
 		var set_foldable_container: FoldableContainer = make_foldable.call(dice_set_name)
@@ -80,6 +81,7 @@ func update_stats() -> void:
 		set_margin.add_theme_constant_override("margin_left", 20)
 		set_foldable_container.add_child(set_margin)
 		set_margin.add_child(set_vbox)
+		
 		for dice_name: String in GameEvents.stats_dict[dice_set_name]:
 			var dice_rolls: int = 0
 			var total_roll_value: int = 0
@@ -88,6 +90,7 @@ func update_stats() -> void:
 			set_vbox.add_child(dice_foldable_container)
 			dice_foldable_container.add_child(dice_vbox)
 			var stats_string := ""
+			
 			for roll_value: String in GameEvents.stats_dict[dice_set_name][dice_name]:
 				var num_rolls: int = GameEvents.stats_dict[dice_set_name][dice_name][roll_value] as int
 				dice_rolls += num_rolls

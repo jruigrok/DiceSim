@@ -30,8 +30,9 @@ func on_dice_rolled(_dice_data: DiceData, _dice_set: DiceSetData, roll: int) -> 
 	dice_history_container.add_child(label)
 	dice_history_container.move_child(label, 0)
 	var history_length := dice_history_container.get_child_count()
-	if history_length > MAX_ROLL_HISTORY:
+	while history_length > MAX_ROLL_HISTORY:
 		dice_history_container.get_child(history_length - 1).queue_free()
+		history_length -= 1
 	
 	var dice_roll := DiceRoll.new()
 	dice_roll.dice_name = _dice_data.resource_name

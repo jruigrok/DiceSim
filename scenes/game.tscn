@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cy56e02cb68ni" path="res://scripts/game.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://c0kkvfs6t36hg" path="res://scenes/dice_sim.tscn" id="2_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ck63j4lfwj35f" path="res://scenes/in_game_menu.tscn" id="3_vtaks"]
-[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/DiceSet.gd" id="4_kvpfn"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="4_kvpfn"]
 [ext_resource type="Resource" uid="uid://cwjjsp5hi1jyi" path="res://dice_sets/BlueDiceSet.tres" id="5_dinhu"]
 [ext_resource type="Resource" uid="uid://7v7sggv6nunc" path="res://dice_sets/MetalPipeDiceSet.tres" id="6_kvuet"]
 [ext_resource type="Resource" uid="uid://43wh6uliyq0k" path="res://dice_sets/RecursiveDiceSet.tres" id="7_trtic"]

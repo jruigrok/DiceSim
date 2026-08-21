@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DiceData" format=3 uid="uid://dvca5ylbmeogp"]
 
-[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://res_scripts/FaceData.gd" id="1_c0b1x"]
-[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/DiceData.gd" id="2_21xv7"]
+[ext_resource type="Script" uid="uid://c5app5ayokdl6" path="res://res_scripts/face_data.gd" id="1_c0b1x"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="2_21xv7"]
 [ext_resource type="ArrayMesh" uid="uid://hki20xfuqnvp" path="res://dice_mesh/d_8.tres" id="2_qpta8"]
 
 [sub_resource type="Resource" id="Resource_r1esx"]
