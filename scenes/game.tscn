@@ -10,6 +10,11 @@
 [ext_resource type="Resource" uid="uid://drxu886qts1ao" path="res://dice_sets/LuckyDiceSet.tres" id="8_ir15t"]
 [ext_resource type="Resource" uid="uid://14wlka163nvt" path="res://dice_sets/UnluckyDiceSet.tres" id="9_0tnpc"]
 [ext_resource type="Resource" uid="uid://btajanlbbljgd" path="res://dice_sets/SpaceDiceSet.tres" id="10_vtaks"]
+[ext_resource type="Resource" uid="uid://crym5bkl4oa54" path="res://dice_sets/FireballDiceSet.tres" id="11_kvpfn"]
+[ext_resource type="Resource" uid="uid://btlj0gtgungfw" path="res://dice_sets/BouncyDiceSet.tres" id="12_dinhu"]
+[ext_resource type="Resource" uid="uid://doy1khdeadhhf" path="res://dice_sets/QuickRollDiceSet.tres" id="13_kvuet"]
+[ext_resource type="Resource" uid="uid://bs26b5pccsdhg" path="res://dice_sets/RandomDiceSet.tres" id="14_trtic"]
+[ext_resource type="Resource" uid="uid://bc27vejbbfi1v" path="res://dice_sets/BuggyDiceSet.tres" id="15_ir15t"]
 
 [node name="Main" type="Node" unique_id=1968358475]
 script = ExtResource("1_gee14")
@@ -17,4 +22,4 @@ script = ExtResource("1_gee14")
 [node name="DiceSim" parent="." unique_id=725421418 instance=ExtResource("2_0tnpc")]
 
 [node name="InGameMenu" parent="." unique_id=4146138 instance=ExtResource("3_vtaks")]
-sets = Array[ExtResource("4_kvpfn")]([ExtResource("5_dinhu"), ExtResource("8_ir15t"), ExtResource("6_kvuet"), ExtResource("7_trtic"), ExtResource("10_vtaks"), ExtResource("9_0tnpc")])
+sets = Array[ExtResource("4_kvpfn")]([ExtResource("5_dinhu"), ExtResource("8_ir15t"), ExtResource("6_kvuet"), ExtResource("7_trtic"), ExtResource("10_vtaks"), ExtResource("9_0tnpc"), ExtResource("12_dinhu"), ExtResource("13_kvuet"), ExtResource("14_trtic"), ExtResource("11_kvpfn"), ExtResource("15_ir15t")])

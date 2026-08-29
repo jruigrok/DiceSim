@@ -32,6 +32,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1921806208]
 
 [node name="Player" parent="." unique_id=1512474498 instance=ExtResource("3_jd2gm")]
-transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.8779946, 0, -0.8779946, 0.4786705, 0, 10, 10)
+transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.8779946, 0, -0.8779946, 0.4786705, 0, 20, 20)
 
 [node name="DiceSelector" parent="." unique_id=1160484203 instance=ExtResource("4_12od1")]

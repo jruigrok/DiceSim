@@ -1,8 +1,7 @@
 [gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://drxu886qts1ao"]
 
 [ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_os8wr"]
-[ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="2_7vadv"]
-[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/ExplosionBh.gd" id="3_35ydv"]
+[ext_resource type="Resource" uid="uid://xf54kv60y41k" path="res://dice_behaviour/hide_effect.tres" id="2_7ageb"]
 [ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_bfq67"]
 [ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="5_k4cny"]
 [ext_resource type="Script" uid="uid://bnoh1oyv4g20o" path="res://scripts/dice_behaviours/WeightedBh.gd" id="6_yr3fb"]
@@ -16,11 +15,6 @@
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="14_e7g3r"]
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="15_8k6o6"]
 [ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="16_dtbx4"]
-
-[sub_resource type="Resource" id="Resource_6l7yi"]
-script = ExtResource("3_35ydv")
-explosion_effect_sc = ExtResource("2_7vadv")
-metadata/_custom_type_script = "uid://gmu7hvu617rd"
 
 [sub_resource type="Resource" id="Resource_vquxa"]
 script = ExtResource("4_bfq67")
@@ -38,9 +32,9 @@ metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 [sub_resource type="Resource" id="Resource_g3y8y"]
 resource_name = "Lucky Dice Set"
 script = ExtResource("8_mmc5e")
-behaviours = Array[ExtResource("1_os8wr")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
+behaviours = Array[ExtResource("1_os8wr")]([ExtResource("2_7ageb"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
 material = ExtResource("7_mu2xu")
-description = "Dont bring these to a casino. Weighted dice to be lucky."
+description = "Dont bring these to a casino."
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
 
 [resource]

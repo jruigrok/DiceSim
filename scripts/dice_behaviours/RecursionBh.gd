@@ -9,9 +9,7 @@ var dice_scene: PackedScene = preload("res://scenes/dice.tscn")
 
 func on_roll(dice: Dice, value: int) -> void:
 	for i in range(value):
-		var sub_dice: Dice = dice_scene.instantiate()
-		sub_dice.dice_data = dice.dice_data
-		sub_dice.set_data = sub_dice_set_data
+		var sub_dice: Dice = Dice.new_dice( dice.dice_data, sub_dice_set_data)
 		dice.get_parent().add_child(sub_dice)
 		sub_dice.global_position = dice.global_position
 		sub_dice.scale = sub_dice_scale * Vector3.ONE

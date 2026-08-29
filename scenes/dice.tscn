@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crpslcouesk5p"]
 
 [ext_resource type="Script" uid="uid://ctp58ltk6axvm" path="res://scripts/dice.gd" id="1_ju2fo"]
+[ext_resource type="ArrayMesh" uid="uid://bgg6vj0drbvd2" path="res://dice_mesh/d_6.tres" id="2_mg5ex"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_psaxu"]
 bounce = 0.5
@@ -17,3 +18,4 @@ unique_name_in_owner = true
 
 [node name="DiceMesh" type="MeshInstance3D" parent="." unique_id=1024375293]
 unique_name_in_owner = true
+mesh = ExtResource("2_mg5ex")

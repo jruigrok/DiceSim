@@ -5,6 +5,7 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g21bf"]
 material = ExtResource("2_444vf")
+size = Vector2(4, 4)
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=1252425372]
 collision_mask = 6

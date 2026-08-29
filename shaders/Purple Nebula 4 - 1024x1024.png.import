@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://7l6dvo4r8fgl"
 path.s3tc="res://.godot/imported/Purple Nebula 4 - 1024x1024.png-6b32ec1e494b01d6388a795d13719a40.s3tc.ctex"
+path.etc2="res://.godot/imported/Purple Nebula 4 - 1024x1024.png-6b32ec1e494b01d6388a795d13719a40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://shaders/Purple Nebula 4 - 1024x1024.png"
-dest_files=["res://.godot/imported/Purple Nebula 4 - 1024x1024.png-6b32ec1e494b01d6388a795d13719a40.s3tc.ctex"]
+dest_files=["res://.godot/imported/Purple Nebula 4 - 1024x1024.png-6b32ec1e494b01d6388a795d13719a40.s3tc.ctex", "res://.godot/imported/Purple Nebula 4 - 1024x1024.png-6b32ec1e494b01d6388a795d13719a40.etc2.ctex"]
 
 [params]
 

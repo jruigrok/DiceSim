@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b70j1xyytosdc"
 path.s3tc="res://.godot/imported/Material.001_baseColor.png-3873fae8ab621aaac12d288724a6393b.s3tc.ctex"
+path.etc2="res://.godot/imported/Material.001_baseColor.png-3873fae8ab621aaac12d288724a6393b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/rpg_dice_set/textures/Material.001_baseColor.png"
-dest_files=["res://.godot/imported/Material.001_baseColor.png-3873fae8ab621aaac12d288724a6393b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Material.001_baseColor.png-3873fae8ab621aaac12d288724a6393b.s3tc.ctex", "res://.godot/imported/Material.001_baseColor.png-3873fae8ab621aaac12d288724a6393b.etc2.ctex"]
 
 [params]
 

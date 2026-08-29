@@ -3,6 +3,7 @@ class_name DiceSetData
 
 @export var behaviours: Array[DiceBehaviour]
 @export var material: Material
+@export var physics_material: PhysicsMaterial
 @export_multiline var description: String
 
 func handle_on_throw(dice: Dice) -> void:

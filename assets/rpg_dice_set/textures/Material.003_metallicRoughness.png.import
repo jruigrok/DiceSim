@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b22rjmodp46nv"
 path.s3tc="res://.godot/imported/Material.003_metallicRoughness.png-d5ec0df68f4a3d4aef62ed17cd03704c.s3tc.ctex"
+path.etc2="res://.godot/imported/Material.003_metallicRoughness.png-d5ec0df68f4a3d4aef62ed17cd03704c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/rpg_dice_set/textures/Material.003_metallicRoughness.png"
-dest_files=["res://.godot/imported/Material.003_metallicRoughness.png-d5ec0df68f4a3d4aef62ed17cd03704c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Material.003_metallicRoughness.png-d5ec0df68f4a3d4aef62ed17cd03704c.s3tc.ctex", "res://.godot/imported/Material.003_metallicRoughness.png-d5ec0df68f4a3d4aef62ed17cd03704c.etc2.ctex"]
 
 [params]
 

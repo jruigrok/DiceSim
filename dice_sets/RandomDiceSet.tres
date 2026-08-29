@@ -1,0 +1,106 @@
+[gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://bs26b5pccsdhg"]
+
+[ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_7v0rs"]
+[ext_resource type="Script" uid="uid://c2iuj0kkb2g4a" path="res://scripts/dice_behaviours/RecursionBh.gd" id="3_vgyso"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_5whs1"]
+[ext_resource type="Material" uid="uid://ckkvyrxbby61r" path="res://materials/Material.008.tres" id="4_bwwtr"]
+[ext_resource type="Resource" uid="uid://w8phm05c7pyu" path="res://dice_behaviour/random_sub_dice.tres" id="4_kdnaf"]
+[ext_resource type="Resource" uid="uid://bp3y7ttbj7nra" path="res://dice_behaviour/doink_sound.tres" id="5_4lpm8"]
+[ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="5_045vc"]
+[ext_resource type="AudioStream" uid="uid://vqa7l7eab0uo" path="res://sounds/u_edtmwfwu7c-metal-pipe-329305.wav" id="5_srxt8"]
+[ext_resource type="Script" uid="uid://g4qddmyllwfl" path="res://scripts/dice_behaviours/SoundBh.gd" id="6_33jnj"]
+[ext_resource type="Resource" uid="uid://xf54kv60y41k" path="res://dice_behaviour/hide_effect.tres" id="6_h4c4a"]
+[ext_resource type="Script" uid="uid://bnoh1oyv4g20o" path="res://scripts/dice_behaviours/WeightedBh.gd" id="7_8mlrv"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/dice_set_data.gd" id="7_lq08q"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="8_thkb0"]
+[ext_resource type="Script" uid="uid://6vkkrscka82" path="res://scripts/dice_behaviours/DuplicateBh.gd" id="8_ti8g4"]
+[ext_resource type="AudioStream" uid="uid://crvnxiv68ovrj" path="res://sounds/shwink.wav" id="9_81fe7"]
+[ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="9_p8w6u"]
+[ext_resource type="AudioStream" uid="uid://bsh3paqvqbqtq" path="res://sounds/wabam.wav" id="10_cjv7i"]
+[ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="10_quqj3"]
+[ext_resource type="AudioStream" uid="uid://bct6csvof1nl5" path="res://sounds/kachow.wav" id="11_46yq5"]
+[ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="11_vgyso"]
+[ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="12_kdnaf"]
+[ext_resource type="Script" uid="uid://dbie6uyupb4ox" path="res://scripts/dice_behaviours/RandomBh.gd" id="12_nh14j"]
+[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="13_srxt8"]
+[ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="14_33jnj"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="15_8mlrv"]
+
+[sub_resource type="Resource" id="Resource_46yq5"]
+script = ExtResource("4_5whs1")
+random_angular_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_nh14j"]
+script = ExtResource("3_vgyso")
+sub_dice_set_data = ExtResource("4_kdnaf")
+metadata/_custom_type_script = "uid://c2iuj0kkb2g4a"
+
+[sub_resource type="Resource" id="Resource_1hsd5"]
+script = ExtResource("6_33jnj")
+audio_stream = ExtResource("5_srxt8")
+metadata/_custom_type_script = "uid://g4qddmyllwfl"
+
+[sub_resource type="Resource" id="Resource_dan5p"]
+script = ExtResource("7_8mlrv")
+metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
+
+[sub_resource type="Resource" id="Resource_voauy"]
+script = ExtResource("8_ti8g4")
+sub_dice_set_data = ExtResource("4_kdnaf")
+metadata/_custom_type_script = "uid://6vkkrscka82"
+
+[sub_resource type="Resource" id="Resource_dpfic"]
+script = ExtResource("6_33jnj")
+audio_stream = ExtResource("9_81fe7")
+sound_event = 0
+metadata/_custom_type_script = "uid://g4qddmyllwfl"
+
+[sub_resource type="Resource" id="Resource_314n6"]
+script = ExtResource("6_33jnj")
+audio_stream = ExtResource("10_cjv7i")
+sound_event = 1
+metadata/_custom_type_script = "uid://g4qddmyllwfl"
+
+[sub_resource type="Resource" id="Resource_y0xxc"]
+script = ExtResource("6_33jnj")
+audio_stream = ExtResource("11_46yq5")
+sound_event = 2
+metadata/_custom_type_script = "uid://g4qddmyllwfl"
+
+[sub_resource type="Resource" id="Resource_rajow"]
+script = ExtResource("4_5whs1")
+min_speed = 30.0
+max_speed = 40.0
+min_angular_speed = 30.0
+max_angular_speed = 40.0
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_a1bwk"]
+script = ExtResource("12_nh14j")
+dice_behaviour_pool = Array[ExtResource("1_7v0rs")]([SubResource("Resource_46yq5"), SubResource("Resource_nh14j"), SubResource("Resource_1hsd5"), SubResource("Resource_dan5p"), SubResource("Resource_voauy"), SubResource("Resource_dpfic"), SubResource("Resource_314n6"), SubResource("Resource_y0xxc"), SubResource("Resource_rajow")])
+metadata/_custom_type_script = "uid://dbie6uyupb4ox"
+
+[sub_resource type="Resource" id="Resource_xl10g"]
+script = ExtResource("5_045vc")
+metadata/_custom_type_script = "uid://b1pmyhx1aypfn"
+
+[sub_resource type="Resource" id="Resource_h58ua"]
+script = ExtResource("4_5whs1")
+random_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_g3y8y"]
+resource_name = "Random Dice Set"
+script = ExtResource("7_lq08q")
+behaviours = Array[ExtResource("1_7v0rs")]([SubResource("Resource_a1bwk"), SubResource("Resource_xl10g"), SubResource("Resource_h58ua"), ExtResource("5_4lpm8"), ExtResource("6_h4c4a")])
+material = ExtResource("4_bwwtr")
+description = "Idk, find out ig"
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
+
+[resource]
+resource_name = "Random Dice Set"
+script = ExtResource("15_8mlrv")
+dice = Array[ExtResource("8_thkb0")]([ExtResource("9_p8w6u"), ExtResource("10_quqj3"), ExtResource("11_vgyso"), ExtResource("12_kdnaf"), ExtResource("13_srxt8"), ExtResource("14_33jnj")])
+data = SubResource("Resource_g3y8y")
+metadata/_custom_type_script = "uid://die8svrhe3dvd"

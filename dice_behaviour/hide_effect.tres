@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EffectBh" format=3 uid="uid://xf54kv60y41k"]
+
+[ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="1_e81h5"]
+[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/EffectBh.gd" id="2_e81h5"]
+
+[resource]
+script = ExtResource("2_e81h5")
+effect_sc = ExtResource("1_e81h5")
+metadata/_custom_type_script = "uid://gmu7hvu617rd"

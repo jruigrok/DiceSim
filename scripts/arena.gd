@@ -12,7 +12,7 @@ func _ready() -> void:
 	var shape := BoxShape3D.new()
 	shape.size = Vector3(width, THICKNESS, depth)
 	collider.shape = shape
-	build_walls(width, depth, 5.0)
+	build_walls(width, depth, 10.0)
 	add_child(collider)
 
 func build_walls(width: float, depth: float, wall_height: float) -> void:

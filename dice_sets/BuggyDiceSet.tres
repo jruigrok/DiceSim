@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="DiceSet" format=3 uid="uid://bc27vejbbfi1v"]
+
+[ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_wwa3q"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="3_2fk00"]
+[ext_resource type="Script" uid="uid://n7i8s5b1uqwn" path="res://scripts/dice_behaviours/crash.gd" id="4_oaiyq"]
+[ext_resource type="Resource" uid="uid://bp3y7ttbj7nra" path="res://dice_behaviour/doink_sound.tres" id="5_ferh7"]
+[ext_resource type="Material" uid="uid://da2wub2as7uhr" path="res://materials/Material.001.tres" id="6_07hmu"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/dice_set_data.gd" id="7_qdf5x"]
+[ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="8_yi5r2"]
+[ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="9_hrr70"]
+[ext_resource type="Resource" uid="uid://4uic5wked64k" path="res://dice_data/d_6.tres" id="10_3iger"]
+[ext_resource type="Resource" uid="uid://dvca5ylbmeogp" path="res://dice_data/d_8.tres" id="11_slquv"]
+[ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="12_87u0r"]
+[ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="13_rp6at"]
+[ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="14_uoj5l"]
+[ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="15_jnqol"]
+
+[sub_resource type="Resource" id="Resource_vquxa"]
+script = ExtResource("3_2fk00")
+random_speed = false
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[sub_resource type="Resource" id="Resource_a68xc"]
+script = ExtResource("4_oaiyq")
+crash_message = "Theres a bug ig"
+metadata/_custom_type_script = "uid://n7i8s5b1uqwn"
+
+[sub_resource type="Resource" id="Resource_g3y8y"]
+resource_name = "Buggy Dice Set"
+script = ExtResource("7_qdf5x")
+behaviours = Array[ExtResource("1_wwa3q")]([SubResource("Resource_vquxa"), ExtResource("5_ferh7"), SubResource("Resource_a68xc")])
+material = ExtResource("6_07hmu")
+description = "I mean... Its blue..."
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
+
+[resource]
+resource_name = "Buggy Dice Set"
+script = ExtResource("15_jnqol")
+dice = Array[ExtResource("8_yi5r2")]([ExtResource("9_hrr70"), ExtResource("10_3iger"), ExtResource("11_slquv"), ExtResource("12_87u0r"), ExtResource("13_rp6at"), ExtResource("14_uoj5l")])
+data = SubResource("Resource_g3y8y")
+metadata/_custom_type_script = "uid://die8svrhe3dvd"

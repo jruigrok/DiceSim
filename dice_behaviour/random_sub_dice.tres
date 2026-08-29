@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DiceSetData" format=3 uid="uid://w8phm05c7pyu"]
+
+[ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_3574h"]
+[ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="2_fxipq"]
+[ext_resource type="Resource" uid="uid://bp3y7ttbj7nra" path="res://dice_behaviour/doink_sound.tres" id="3_ymt31"]
+[ext_resource type="Resource" uid="uid://xf54kv60y41k" path="res://dice_behaviour/hide_effect.tres" id="4_1y6n7"]
+[ext_resource type="Material" uid="uid://ckkvyrxbby61r" path="res://materials/Material.008.tres" id="5_a2mbo"]
+[ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/dice_set_data.gd" id="6_vyq62"]
+
+[sub_resource type="Resource" id="Resource_hkpyc"]
+script = ExtResource("2_fxipq")
+metadata/_custom_type_script = "uid://cfays247nwmc1"
+
+[resource]
+script = ExtResource("6_vyq62")
+behaviours = Array[ExtResource("1_3574h")]([SubResource("Resource_hkpyc"), ExtResource("3_ymt31"), ExtResource("4_1y6n7")])
+material = ExtResource("5_a2mbo")
+metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
