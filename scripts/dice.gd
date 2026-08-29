@@ -7,9 +7,11 @@ class_name Dice
 
 @onready var collision_shape: CollisionShape3D = %CollisionShape3D
 @onready var mesh_instance: MeshInstance3D = %DiceMesh
+
 static var dice_scene := preload("uid://crpslcouesk5p")
 
 enum DiceState {
+	THROWING,
 	ROLLING,
 	ROLLED,
 	HIDDEN
@@ -22,7 +24,7 @@ const HIDE_TIMEOUT: float = 5
 const FREE_TIMEOUT: float = 5
 const MIN_Y_BOUND = -20.0
 var time_tracker: float = 0.0
-var cur_state: DiceState = DiceState.ROLLING
+var cur_state: DiceState = DiceState.THROWING
 
 static func new_dice(_dice_data: DiceData, _set_data: DiceSetData) -> Dice:
 	var dice: Dice = dice_scene.instantiate()
@@ -32,9 +34,12 @@ static func new_dice(_dice_data: DiceData, _set_data: DiceSetData) -> Dice:
 
 func _ready() -> void:
 	mesh_instance.mesh = dice_data.mesh
-	mesh_instance.material_override = set_data.material
+	if  set_data.material:
+		mesh_instance.material_override = set_data.material
+	if set_data.physics_material:
+		physics_material_override = set_data.physics_material
+		
 	collision_shape.shape = mesh_instance.mesh.create_convex_shape()
-	set_data.handle_on_throw(self)
 
 func _physics_process(delta: float) -> void:
 	time_tracker += delta
@@ -50,6 +55,9 @@ func is_moving() -> bool:
 
 func handle_state() -> void:
 	match (cur_state):
+		DiceState.THROWING:
+			set_data.handle_on_throw(self)
+			cur_state = DiceState.ROLLING
 		DiceState.ROLLING:
 			if (is_moving()):
 				time_tracker = 0

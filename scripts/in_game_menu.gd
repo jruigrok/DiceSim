@@ -5,6 +5,7 @@ class_name InGameMenu
 @onready var roll_history_container := %RollHistoryContainer
 @onready var stats_container := %StatsContainer
 @onready var exit_button := %ExitButton
+@onready var clear_stats_button := %ClearStatsButton
 
 @export var sets: Array[DiceSet]
 const BUTTON_SIZE := Vector2i(200,50)
@@ -12,6 +13,7 @@ const BUTTON_SIZE := Vector2i(200,50)
 func _ready() -> void:
 	GameEvents.game_state_change.connect(on_game_state_change)
 	exit_button.pressed.connect(on_exit_pressed)
+	clear_stats_button.pressed.connect(on_clear_stats_pressed)
 	
 	var button_group := ButtonGroup.new()
 	for dice_set: DiceSet in sets:
@@ -105,3 +107,7 @@ func update_stats() -> void:
 		total_rolls += set_rolls
 		set_vbox.add_child(make_label.call("num rolls: %d" % [set_rolls]))
 	stats_container.add_child(make_label.call("num rolls: %d" % [total_rolls]))
+
+func on_clear_stats_pressed() -> void:
+	GameEvents.clear_stats()
+	update_stats()

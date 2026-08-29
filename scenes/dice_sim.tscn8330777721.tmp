@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c0xec5bo1xe4r" path="res://scenes/arena.tscn" id="3_5ghwb"]
 [ext_resource type="PackedScene" uid="uid://t6iot3y2j1rj" path="res://scenes/player.tscn" id="3_jd2gm"]
 [ext_resource type="PackedScene" uid="uid://b8mqbc133g0uo" path="res://scenes/dice_selector.tscn" id="4_12od1"]
+[ext_resource type="Shader" uid="uid://b3l0l173dcj3h" path="res://shaders/outline.gdshader" id="4_vquxa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjywd"]
 
@@ -15,6 +16,15 @@ background_mode = 2
 sky = SubResource("Sky_vquxa")
 ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twsd4"]
+render_priority = 0
+shader = ExtResource("4_vquxa")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/shadow_thickness = 2.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ss5pj"]
+material = SubResource("ShaderMaterial_twsd4")
 
 [node name="DiceSim" type="Node3D" unique_id=725421418]
 script = ExtResource("1_5ghwb")
@@ -33,5 +43,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 
 [node name="Player" parent="." unique_id=1512474498 instance=ExtResource("3_jd2gm")]
 transform = Transform3D(1, 0, 0, 0, 0.4786705, 0.8779946, 0, -0.8779946, 0.4786705, 0, 20, 20)
+
+[node name="Outline" type="MeshInstance3D" parent="Player" unique_id=1089790224]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.5)
+mesh = SubResource("PlaneMesh_ss5pj")
 
 [node name="DiceSelector" parent="." unique_id=1160484203 instance=ExtResource("4_12od1")]

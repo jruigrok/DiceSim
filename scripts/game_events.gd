@@ -72,3 +72,7 @@ func save_stats() -> void:
 	var file := FileAccess.open(STATS_FILE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(stats_dict))
 	file.close()
+
+func clear_stats() -> void:
+	stats_dict.clear()
+	DirAccess.remove_absolute(STATS_FILE_PATH)

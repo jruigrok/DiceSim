@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dsgi06ltj5bfe" path="res://res_scripts/dice_data.gd" id="1_c7aqn"]
 [ext_resource type="Script" uid="uid://0k3ns4ifkv3o" path="res://scripts/dice_behaviours/DiceBehaviour.gd" id="1_vl1tm"]
-[ext_resource type="PackedScene" uid="uid://c25eq0qq1py5q" path="res://assets/BinbunVFX_Vol2/StylizedHitFX/effects/impact/vfx_impact_01.tscn" id="2_88u37"]
 [ext_resource type="Script" uid="uid://die8svrhe3dvd" path="res://res_scripts/dice_set.gd" id="2_jrea1"]
-[ext_resource type="Script" uid="uid://gmu7hvu617rd" path="res://scripts/dice_behaviours/ExplosionBh.gd" id="3_lgrbx"]
+[ext_resource type="Resource" uid="uid://xf54kv60y41k" path="res://dice_behaviour/hide_effect.tres" id="2_vl1tm"]
 [ext_resource type="Script" uid="uid://cfays247nwmc1" path="res://scripts/dice_behaviours/RandomVelBh.gd" id="4_jdytq"]
 [ext_resource type="Script" uid="uid://b1pmyhx1aypfn" path="res://scripts/dice_behaviours/RollLabelBh.gd" id="5_5eqff"]
 [ext_resource type="Script" uid="uid://bnoh1oyv4g20o" path="res://scripts/dice_behaviours/WeightedBh.gd" id="6_y2h3s"]
+[ext_resource type="Resource" uid="uid://bp3y7ttbj7nra" path="res://dice_behaviour/doink_sound.tres" id="7_88u37"]
 [ext_resource type="Material" uid="uid://2jnekqhbnw7l" path="res://materials/Material.010.tres" id="7_vl1tm"]
 [ext_resource type="Script" uid="uid://uvh8aq7b0n8d" path="res://res_scripts/dice_set_data.gd" id="8_8l1lu"]
 [ext_resource type="Resource" uid="uid://cb2aisnsrmfxc" path="res://dice_data/d_4.tres" id="10_kfqts"]
@@ -16,11 +16,6 @@
 [ext_resource type="Resource" uid="uid://bxr7wtem3qov1" path="res://dice_data/d_12.tres" id="13_x16tu"]
 [ext_resource type="Resource" uid="uid://btcfum7vepv1i" path="res://dice_data/d_10.tres" id="14_kvx00"]
 [ext_resource type="Resource" uid="uid://cw2dsbhvho3ng" path="res://dice_data/d_20.tres" id="15_gp81y"]
-
-[sub_resource type="Resource" id="Resource_6l7yi"]
-script = ExtResource("3_lgrbx")
-explosion_effect_sc = ExtResource("2_88u37")
-metadata/_custom_type_script = "uid://gmu7hvu617rd"
 
 [sub_resource type="Resource" id="Resource_vquxa"]
 script = ExtResource("4_jdytq")
@@ -39,7 +34,7 @@ metadata/_custom_type_script = "uid://bnoh1oyv4g20o"
 [sub_resource type="Resource" id="Resource_g3y8y"]
 resource_name = "Unlucky Dice Set"
 script = ExtResource("8_8l1lu")
-behaviours = Array[ExtResource("1_vl1tm")]([SubResource("Resource_6l7yi"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy")])
+behaviours = Array[ExtResource("1_vl1tm")]([ExtResource("2_vl1tm"), SubResource("Resource_vquxa"), SubResource("Resource_5ghwb"), SubResource("Resource_hwufy"), ExtResource("7_88u37")])
 material = ExtResource("7_vl1tm")
 description = "Dice when I roll them for some reason."
 metadata/_custom_type_script = "uid://uvh8aq7b0n8d"
